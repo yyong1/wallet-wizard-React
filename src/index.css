@@ -1,31 +1,49 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 :root {
   --primary: #9f4eca;
   --secondary: #cfb3cd;
   --accent-primary: #4eca9f;
-  --accent-primary-hover: #4ABF97;;
+  --accent-primary-hover: #4abf97;
   --accent-secondary: #b3cfb5;
-  --accent-secondary-hover: #A6CFA9;
+  --accent-secondary-hover: #a6cfa9;
   --ww-black: #50514f;
   --ww-white: #f6f8ff;
   --ww-grey: #a6a2a2;
   --hover: #dadff2;
 }
 
-p{
+/**
+* do the same for headings
+*/
+
+p {
   font-family: "Inconsolata", monospace;
   color: var(--ww-black);
+  margin: 0;
+  padding: 5px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button.primary{
+  background-color: var(--accent-primary);
+  border-radius: 10px;
+  border: 0;
+  padding: 0.5%;
+}
+
+button.primary:hover{
+  background-color: var(--accent-primary-hover);
+}
+
+button.primary-outlined{
+  border-color: var(--accent-primary);
+  background-color: var(--ww-white);
+  border-radius: 10px;
+}
+
+button.primary-outlined:hover{
+  background-color: var(--accent-primary);
 }

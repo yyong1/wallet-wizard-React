@@ -1,0 +1,33 @@
+.navbar{
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    max-height: 40px;
+    margin: 0 auto;
+    background-color: var(--primary);
+}
+
+.navbar a{
+    padding: 1%;
+    font-family: 'Inconsolata', monospace;
+    color: var(--ww-white);
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+}
+
+.navbar h2{
+    font-size: 36px;
+    font-family: 'Inconsolata', monospace;
+    color: var(--ww-white);
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.navbar .buttons{
+    /*problem*/
+    margin-left: auto;
+}
+
