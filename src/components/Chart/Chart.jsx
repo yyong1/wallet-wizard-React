@@ -13,14 +13,38 @@ function Chart({ dataExpense }) {
   const { dataAmount, expensesLabels, expensesChartColors } = dataExpense;
   // const chartColors = props.colors;
   // const chartColors = ['green', 'red'];
+
+  // bug that renders the chart text multiple times in a second (bad performance)
+  function getSum(arrData) {
+    const sum = arrData.reduce((a, b) => a + b, 0);
+    console.log(sum);
+    return sum;
+  }
+
+  const centerText = {
+    id: 'centerText',
+    beforeDatasetsDraw(chart, args, options) {
+      const { ctx, data } = chart;
+
+      ctx.save();
+      ctx.font = 'bolder 30px Arial'; // font size string value
+      ctx.fillStyle = 'black';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(`Total: ${getSum(dataAmount)}`, chart.getDatasetMeta(0).data[0].x, chart.getDatasetMeta(0).data[0].y);
+      ctx.restore();
+    },
+  };
+
   // def a chart parameters
   const data = {
     label: expensesLabels,
     datasets: [{
-      label: 'Poll',
+      label: expensesLabels,
       data: dataAmount,
       backgroundColor: expensesChartColors,
       borderColor: expensesChartColors,
+      cutout: '75%',
     }],
   };
   //   const options = {};
@@ -28,7 +52,7 @@ function Chart({ dataExpense }) {
     <div>
       <Doughnut
         data={data}
-      // options={options}
+        plugins={[centerText]}
       />
     </div>
   );
