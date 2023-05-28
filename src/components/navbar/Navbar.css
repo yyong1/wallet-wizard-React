@@ -29,5 +29,8 @@
 .navbar .buttons{
     /*problem*/
     margin-left: auto;
+    float: right;
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
 }
-
