@@ -16,6 +16,7 @@
 
 .navbar a:hover{
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .navbar h2{
@@ -27,7 +28,6 @@
 }
 
 .navbar .buttons{
-    /*problem*/
     margin-left: auto;
     float: right;
     width: 40%;

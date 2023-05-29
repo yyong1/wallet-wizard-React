@@ -11,10 +11,10 @@ const Navbar = () => {
             <a>Accounts</a>
             <a>Achievements</a>
             <div className='buttons'>
-                <button className='primary' style={{marginRight:"3%"}}>
+                <button className='primary' style={{marginRight:"0"}}>
                     <p>Log out</p>
                 </button>
-                <button className='primary-outlined' style={{marginRight:"7%"}}>
+                <button className='primary-outlined'>
                     <p>Profile</p>
                 </button>
             </div>
