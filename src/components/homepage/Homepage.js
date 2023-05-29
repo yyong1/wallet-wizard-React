@@ -1,4 +1,5 @@
 import logo from '../../bigwiz.png';
+import FormModal from '../form-modal/FormModal';
 import './Homepage.css'
 import { useState } from 'react';
 
@@ -12,10 +13,10 @@ const Homepage = () => {
 
     return (
         <div className="homepage">
-            <div style={{ height: "20px" }}></div>
+            {/* <div style={{ height: "20px" }}></div>
             <h2 style={{ marginLeft: "18vmax" }}>{par2}</h2>
             <div>
-                <button onClick={handleClick}>
+                <button className='bubble' onClick={handleClick}>
                     <h2>
                         Join me.
                     </h2>
@@ -26,7 +27,8 @@ const Homepage = () => {
                     <h2 style={{ marginTop: "8%", marginLeft: "4%" }}>{par}</h2>
                     <img src={logo} className='wizard'></img>
                 </div>
-            </div>
+            </div> */}
+            <FormModal />
         </div>
 
     );

@@ -3,9 +3,10 @@
   max-width: 100%;
   max-height: 100%;
   background-color: var(--secondary);
+
 }
 
-.homepage button {
+.homepage button.bubble {
   
   width: min-content;
   height: min-content;
