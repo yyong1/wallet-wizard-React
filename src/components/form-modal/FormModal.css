@@ -96,3 +96,7 @@ a:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.formmodal .form .dropdown input{
+  cursor: pointer;
+}

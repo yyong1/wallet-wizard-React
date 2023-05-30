@@ -29,18 +29,11 @@ const FormModal = ({ fields, title, p, a, buttonText, redirectPr, redirectA }) =
                         <input type="password" placeholder='********' /> */}
 
                         {fields.map((i) => (
-                            <div key={i.id}>
+                            <div key={i.id} className={i.class}>
                                 <p>{i.label}</p>
-                                <input placeholder={i.placeholder} type={i.type}></input>
+                                <input placeholder={i.placeholder} type={i.type} />
                             </div>
                         ))}
-
-                        <p>Default currency</p>
-                        <div>
-                            <button className='dropdown'>
-                                ungabunga
-                            </button>
-                        </div>
                     </div>
                     <p style={{ textAlign: "center" }}>{p}</p>
                     <a href={redirectA} style={{ paddingTop: "0" }}>{a}</a>

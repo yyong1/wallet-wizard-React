@@ -1,25 +1,11 @@
 import logo from '../../bigwiz.png';
-import FormModal from '../form-modal/FormModal';
 import './Homepage.css'
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Homepage = () => {
-    /**example 
-    const [name, setName] = useState('firstName');
-    const handleClick = () => {
-        setName('secondName');
-    }*/
 
     const par = "Your finances are a mess, let the Wallet Wizard help you, child...";
     const par2 = "If you want to start tracking your expenses and income, then click on the button ";
-
-    /**not so efficient, since almost all fields require different types of input */
-    // const [fields, setFields]= useState([
-    //     {id:0, label:"Name", placeholder:"name"},
-    //     {id:1, label:"Email", placeholder:"name@email.com"},
-    //     {id:2, label:"Password", placeholder:"********", type:"password"}
-    // ]);
 
     const navigate = useNavigate();
 
