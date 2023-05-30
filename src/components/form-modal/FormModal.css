@@ -89,6 +89,7 @@
   padding: 5px;
   display: block;
   align-items: center;
+  text-decoration: 0;
 }
 
 a:hover {
