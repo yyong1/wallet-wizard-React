@@ -25,6 +25,11 @@
     color: var(--ww-white);
     padding-left: 2%;
     padding-right: 2%;
+    text-decoration: none;
+}
+
+.navbar h2 a:hover{
+    text-decoration: none;
 }
 
 .navbar .buttons{
