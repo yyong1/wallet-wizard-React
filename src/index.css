@@ -1,6 +1,7 @@
 :root {
   --primary: #9f4eca;
   --secondary: #cfb3cd;
+  --secondary-darker: #B79EB5;
   --accent-primary: #4eca9f;
   --accent-primary-hover: #4abf97;
   --accent-secondary: #b3cfb5;
@@ -8,7 +9,7 @@
   --ww-black: #50514f;
   --ww-white: #f6f8ff;
   --ww-grey: #a6a2a2;
-  --hover: #dadff2;
+  --hover-blue: #dadff2;
 }
 
 /**
@@ -32,6 +33,7 @@ h2 {
 
 h1 {
   font-family: "Inconsolata", monospace;
+  color: var(--ww-black);
   margin: 0;
   padding: 5px;
   font-weight: 700;
