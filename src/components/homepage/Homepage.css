@@ -1,0 +1,28 @@
+.homepage {
+  padding: 1%;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: var(--secondary);
+}
+
+.homepage button.bubble {
+  
+  width: min-content;
+  height: min-content;
+  border-radius: 100%;
+  background-color: var(--accent-primary);
+  margin-top: 2%;
+  margin-left: 45%;
+  padding: 5%;
+}
+
+.homepage .bubble {
+  width: min-content;
+  height: min-content;
+  border-radius: 100%;
+  background-color: var(--accent-primary);
+  margin-left: auto;
+  margin-right: 36%;
+  padding: 3%;
+}
+

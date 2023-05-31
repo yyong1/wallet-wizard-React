@@ -1,31 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 :root {
   --primary: #9f4eca;
   --secondary: #cfb3cd;
   --accent-primary: #4eca9f;
-  --accent-primary-hover: #4ABF97;;
+  --accent-primary-hover: #4abf97;
   --accent-secondary: #b3cfb5;
-  --accent-secondary-hover: #A6CFA9;
+  --accent-secondary-hover: #a6cfa9;
   --ww-black: #50514f;
   --ww-white: #f6f8ff;
   --ww-grey: #a6a2a2;
   --hover: #dadff2;
 }
 
-p{
+/**
+* do the same for headings
+*/
+
+p {
   font-family: "Inconsolata", monospace;
   color: var(--ww-black);
+  margin: 0;
+  padding: 5px;
+}
+
+h2 {
+  font-family: "Inconsolata", monospace;
+  color: var(--ww-black);
+  margin: 0;
+  padding: 5px;
+  font-weight: 700;
+}
+
+h1 {
+  font-family: "Inconsolata", monospace;
+  margin: 0;
+  padding: 5px;
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  padding: 0.5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  border:0
+}
+
+button:active{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+button.primary {
+  background-color: var(--accent-primary);
+  border-radius: 10px;
+  border: 0;
+}
+
+button.primary:hover {
+  background-color: var(--accent-primary-hover);
+  cursor: pointer;
+}
+
+button.primary-outlined {
+  background-color: var(--ww-white);
+  border-color: var(--accent-primary);
+  border-radius: 10px;
+  border:1px solid #4abf97
+}
+
+button.primary-outlined:hover {
+  background-color: var(--accent-primary);
+  cursor: pointer;
 }
