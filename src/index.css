@@ -89,3 +89,45 @@ button.secondary:hover{
   background-color: var(--accent-secondary-hover);
   cursor: pointer;
 }
+
+input {
+  width: 90%;
+  padding: 5px;
+  border: 1px solid #50514f;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: "Inconsoloata", monospace;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--ww-black);
+}
+
+.icon-color-dropdown{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+
+.icon-color-dropdown:hover{
+  background-color: var(--hover-blue);
+}
+
+.dropdown{
+  background-color: var(--ww-white);
+}
+
+.dropdown:hover{
+  background-color: var(--hover-blue);
+  cursor: pointer;
+}
+
+.icon-color-dropdown-item {
+  border: 10px black;
+  width: 100%;
+}
+
+.icon-color-dropdown-item img {
+  width: 80%;
+  height: 80%;
+  padding: 2px;
+}
