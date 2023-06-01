@@ -39,3 +39,7 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.navbar .buttons button{
+    padding:1%;
+}

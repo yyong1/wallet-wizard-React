@@ -45,11 +45,14 @@ body {
 }
 
 button {
-  padding: 0.5%;
+  padding: 3%;
   margin-left: 5%;
   margin-right: 5%;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
-  border:0
+  border:0;
+  border-radius: 10px;
+  font-family: 'Inconsolata', monospace;
+  color:var(--ww-black)
 }
 
 button:active{
@@ -58,8 +61,6 @@ button:active{
 
 button.primary {
   background-color: var(--accent-primary);
-  border-radius: 10px;
-  border: 0;
 }
 
 button.primary:hover {
@@ -70,11 +71,21 @@ button.primary:hover {
 button.primary-outlined {
   background-color: var(--ww-white);
   border-color: var(--accent-primary);
-  border-radius: 10px;
-  border:1px solid #4abf97
+  border:1px solid #4abf97;
+  color: var(--accent-primary);
 }
 
 button.primary-outlined:hover {
   background-color: var(--accent-primary);
+  color: var(--ww-black);
+  cursor: pointer;
+}
+
+button.secondary{
+  background-color: var(--accent-secondary);
+}
+
+button.secondary:hover{
+  background-color: var(--accent-secondary-hover);
   cursor: pointer;
 }

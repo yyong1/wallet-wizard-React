@@ -45,10 +45,10 @@ const Navbar = () => {
             <a onClick={achievements}>Achievements</a>
             <div className='buttons'>
                 <button className='primary' style={{marginRight:"0"}}>
-                    <p>Log out</p>
+                    Log out
                 </button>
                 <button className='primary-outlined'>
-                    <p>Profile</p>
+                    Profile
                 </button>
             </div>
         </div>
