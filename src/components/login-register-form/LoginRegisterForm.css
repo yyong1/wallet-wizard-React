@@ -30,7 +30,7 @@
   margin-right: auto;
 }
 
-.login-register-form .form input {
+/* .login-register-form .form input {
   margin: 2%;
   width: 90%;
   padding: 5px;
@@ -41,7 +41,7 @@
   font-weight: 500;
   font-size: 18px;
   color: var(--ww-black);
-}
+} */
 
 .login-register-form .form p {
   font-weight: 600;
