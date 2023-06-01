@@ -8,18 +8,22 @@ const MSLayout = (props) => {
     var title = props.title;
     var main = props.main;
     var secondary = props.secondary;
+
     return (
         <div className="mslayout">
             <div className='main'>
                 <div className='title'>
                     <h1>{title}</h1>
                     <div className='buttons'>
-                        {/* <button className='secondary'>
-                            Add {title}
-                        </button> */}
                         {/* text here goes in two rows */}
-                        <ButtonIcon string="pixelarticons:plus" label={"Add " + title} />
-                        <ButtonIcon string="pixelarticons:edit-box" label={"Edit " + title} />
+                        <button className='button-icon'>
+                            <Icon icon="pixelarticons:plus" />
+                            Add {title.toLowerCase()}
+                        </button>
+                        <button className='button-icon'>
+                            <Icon icon="pixelarticons:edit-box" />
+                            Edit {title.toLowerCase()}
+                        </button>
                     </div>
                 </div>
                 <div className='main-items'>
