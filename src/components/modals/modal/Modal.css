@@ -1,0 +1,53 @@
+.modal-background {
+  width: 93vw;
+  height: 80vh;
+  background-color: var(--ww-grey);
+  display: flex;
+  flex: auto;
+}
+
+.modal {
+  position: absolute;
+  margin: 10% 30% 0% 30%;
+  width: 40%;
+  background-color: var(--ww-white);
+  border-radius: 10px;
+}
+
+.body {
+  padding: 3%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.modal h1 {
+  text-align: center;
+  background-color: var(--primary);
+  border-radius: 10px 10px 0 0;
+  color: var(--ww-white);
+}
+
+.footer {
+  display: flex;
+  float: right;
+  justify-content: flex-end;
+  width: 100%;
+  height: fit-content;
+  padding: 2% 5% 2% 5%;
+}
+
+.half {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+input {
+  padding: 5px;
+  width: 100%;
+  margin: 1%;
+}
+
+p {
+  font-weight: 700;
+}
