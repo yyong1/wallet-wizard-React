@@ -11,22 +11,8 @@ function Chart({ dataExpense }) {
   // dataAmount is an array of numbers where each number represents
   // the amount of data for each chart [3, 6]
   const { dataAmount, expensesLabels, expensesChartColors } = dataExpense;
-  // const chartColors = props.colors;
-  // const chartColors = ['green', 'red'];
-
-  // bug that renders the chart text multiple times in a second (bad performance)
-  // function getSum(arrData) {
-  //   const sum = arrData.reduce((a, b) => a + b, 0);
-  //   console.log(sum);
-  //   console.log(dataAmount);
-  //   return sum;
-  // }
-
   // render once or when the component is mounted
-  const sum = useMemo(() => dataAmount.reduce((a, b) => {
-    console.log(dataAmount);
-    return a + b;
-  }, 0), [dataAmount]);
+  const sum = useMemo(() => dataAmount.reduce((a, b) => a + b, 0), [dataAmount]);
 
   const centerText = {
     id: 'centerText',
@@ -42,8 +28,6 @@ function Chart({ dataExpense }) {
       ctx.restore();
     },
   };
-
-  console.log('label data', expensesLabels);
 
   // def a chart parameters
   const data = {
