@@ -1,5 +1,5 @@
 import './Login.css';
-import FormModal from '../form-modal/FormModal';
+import LoginRegisterForm from '../login-register-form/LoginRegisterForm';
 import { useState } from 'react';
 
 
@@ -10,7 +10,7 @@ const Login = () => {
     ]) 
     return ( 
         <div className="login">
-            <FormModal title="Log in" p="Don't have an account?" a = "Sign up" fields = {fields} buttonText="Log in" redirectPr = "/expenses" redirectA="/register"/>
+            <LoginRegisterForm title="Log in" p="Don't have an account?" a = "Sign up" fields = {fields} buttonText="Log in" redirectPr = "/expenses" redirectA="/register"/>
         </div>
      );
 }

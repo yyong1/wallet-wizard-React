@@ -1,4 +1,4 @@
-.formmodal {
+.login-register-form {
   width: 25%;
   max-height: 70%;
   margin-left: 11%;
@@ -6,7 +6,7 @@
   border-radius: 10px;
 }
 
-.formmodal .title {
+.login-register-form .title {
   background-color: var(--primary);
   margin-top: 0%;
   text-align: center;
@@ -16,21 +16,21 @@
   border-radius: 10px 10px 0px 0px;
 }
 
-.formmodal .form {
+.login-register-form .form {
   background-color: var(--ww-white);
   max-width: 90%;
   padding: 10%;
   margin: auto;
 }
 
-.formmodal .form half {
+.login-register-form .form half {
   padding: 2%;
   max-width: 48%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.formmodal .form input {
+.login-register-form .form input {
   margin: 2%;
   width: 90%;
   padding: 5px;
@@ -43,14 +43,14 @@
   color: var(--ww-black);
 }
 
-.formmodal .form p {
+.login-register-form .form p {
   font-weight: 600;
 }
 
 /*
 * not finished
 */
-.formmodal .form button.dropdown {
+.login-register-form .form button.dropdown {
   margin: 2%;
   width: 90%;
   padding: 5px;
@@ -65,13 +65,13 @@
   color: var(--ww-black);
 }
 
-.formmodal .buttons {
+.login-register-form .buttons {
   padding: 4%;
   display: flex;
   justify-content: center;
 }
 
-.formmodal .buttons button{
+.login-register-form .buttons button{
   margin-left: 5%;
   padding-left: 4%;
   padding-right: 4%;
@@ -79,7 +79,7 @@
   padding-bottom: 2%;
 }
 
-.formmodal a {
+.login-register-form a {
   font-family: "Inconsolata", monospace;
   font-style: normal;
   font-weight: 500;
@@ -97,6 +97,6 @@ a:hover {
   cursor: pointer;
 }
 
-.formmodal .form .dropdown input{
+.login-register-form .form .dropdown input{
   cursor: pointer;
 }
