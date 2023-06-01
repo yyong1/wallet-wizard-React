@@ -1,0 +1,83 @@
+.mslayout {
+  margin: 3%;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 16px;
+  padding-bottom: 1%;
+}
+
+.title .buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 25%;
+  align-items: center;
+}
+
+.main-items {
+  background-color: var(--secondary);
+  width: 98%;
+  padding: 1%;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-auto-rows: minmax(150px, auto);
+  padding: 2%;
+  row-gap: 10%;
+}
+
+.card {
+  padding: 3%;
+  background-color: var(--ww-white);
+  width: 35%;
+  height: 90%;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 13px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  justify-self: center;
+}
+
+.main .card {
+  width: 20%;
+  height: 70%;
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.card:hover {
+  background-color: var(--hover-blue);
+  cursor: pointer;
+}
+
+.card:active {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.secondary {
+  margin-top: 1%;
+  background-color: var(--secondary-darker);
+  padding: 2%;
+}
+
+.secondary .secondary-items .card-list {
+  grid-template-columns: repeat(5, 20%);
+  grid-auto-columns: minmax(auto, auto);
+  column-gap: 0;
+}
