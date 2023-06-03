@@ -66,3 +66,12 @@ p {
   display: inline-block;
   text-align: center;
 }
+
+.modal .wizard{
+  bottom: 30%;
+  left:33%;
+}
+
+.modal .wizard{
+  border-color: var(--secondary);
+}

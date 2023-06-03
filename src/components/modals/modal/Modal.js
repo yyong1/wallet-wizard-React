@@ -9,6 +9,7 @@ import blue from '../../../assets/blue.png';
 import red from '../../../assets/red.png';
 import yellow from '../../../assets/yellow.png';
 import green from '../../../assets/green.png';
+import wizard from '../../../small-wizard.png'
 
 const Modal = ({ title, toggle, single, placeholder }) => {
     const [openIcon, setOpenIcon] = useState(false);
@@ -44,7 +45,7 @@ const Modal = ({ title, toggle, single, placeholder }) => {
                     <div className='half'>
                         <div className='field'>
                             <p>Name *</p>
-                            <input placeholder= {single + ' name'} required></input>
+                            <input placeholder={single + ' name'} required></input>
                         </div>
                         <div className='field'>
                             <p>Icon</p>
@@ -69,7 +70,7 @@ const Modal = ({ title, toggle, single, placeholder }) => {
                     <div className='half'>
                         <div className='field'>
                             <p>Parent {single}</p>
-                            <input placeholder={placeholder}/>
+                            <input placeholder={placeholder} />
                         </div>
                         <div className='field'>
                             <p>Color</p>
@@ -94,8 +95,11 @@ const Modal = ({ title, toggle, single, placeholder }) => {
                 * buttons are too tall
                 */}
                 <div className='footer'>
-                    <button className='primary-outlined' onClick={()=>{toggle(false, '')}}>Cancel</button>
-                    <button className='primary' onClick={()=>{toggle(false, '')}}>Save</button>
+                    <button className='primary-outlined' onClick={() => { toggle(false, '') }}>Cancel</button>
+                    <button className='primary' onClick={() => { toggle(false, '') }}>Save</button>
+                </div>
+                <div className='wizard'>
+                    <img src={wizard} />
                 </div>
             </div>
         </div>
