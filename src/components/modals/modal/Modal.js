@@ -48,7 +48,7 @@ const Modal = ({ title, toggle, single, placeholder }) => {
                         </div>
                         <div className='field'>
                             <p>Icon</p>
-                            <button className='dropdown' onClick={handleOpenIcon}>
+                            <button className='icon-color-dropdown' onClick={handleOpenIcon}>
                                 <img src={bus} alt='bus' />
                                 {
                                     openIcon ? (
@@ -73,7 +73,7 @@ const Modal = ({ title, toggle, single, placeholder }) => {
                         </div>
                         <div className='field'>
                             <p>Color</p>
-                            <button className='dropdown' onClick={handleOpenColor}>
+                            <button className='icon-color-dropdown' onClick={handleOpenColor}>
                                 <img src={palette}></img>
                                 {
                                     openColor ? (

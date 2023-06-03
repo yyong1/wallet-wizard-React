@@ -115,16 +115,6 @@ input {
   color: var(--ww-black);
 }
 
-.icon-color-dropdown {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 10px;
-}
-
-.icon-color-dropdown:hover {
-  background-color: var(--hover-blue);
-}
-
 button.dropdown {
   background-color: white;
   width: 90%;
@@ -161,9 +151,34 @@ button.dropdown-item:hover {
   background-color: var(--hover-blue);
 }
 
+button.icon-color-dropdown{
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  padding: 3%;
+  background-color: white;
+  border: 1px solid var(--ww-black);
+  border-radius: 15%;
+}
+
+.icon-color-dropdown {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+
+.icon-color-dropdown:hover {
+  background-color: var(--hover-blue);
+}
+
 .icon-color-dropdown-item {
   border: 10px black;
   width: 100%;
+  background-color: var(--ww-white);
+}
+
+.icon-color-dropdown-item:hover{
+  background-color: var(--secondary);
 }
 
 .icon-color-dropdown-item img {
