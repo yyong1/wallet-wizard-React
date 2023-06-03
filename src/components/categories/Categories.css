@@ -1,5 +1,6 @@
 .categories{
     margin:3%;
+    padding-top: 3%;
 }
 
 .title {
@@ -23,6 +24,7 @@
   background-color: var(--secondary);
   width: 98%;
   padding: 1%;
+  border-radius: 10px;
 }
 
 .card-list {
@@ -74,6 +76,7 @@
   margin-top: 1%;
   background-color: var(--secondary-darker);
   padding: 2%;
+  border-radius: 10px;
 }
 
 .secondary .secondary-items .card-list {
