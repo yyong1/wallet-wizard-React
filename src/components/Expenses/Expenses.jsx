@@ -68,23 +68,6 @@ function Expenses() {
   const [isChartData, setChartDataState] = useState(chartData);
 
   return (
-    // <div className="expenses">
-    //   <div className="expenses-list">
-    //     <h1>Expenses</h1>
-    //     <div className="list-con">
-    //       {isExpenses?.map((item) => (
-    //         <div key={item.id} className="list-cell">
-    //           <img src={item?.img} className="list-of-smth" alt="..." />
-    //           <div className="">{item.name}</div>
-    //           <div className="">{item.amount}</div>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   </div>
-    //   <div className="chart-con">
-    //     <Chart dataExpense={isChartData} />
-    //   </div>
-    // </div>
     <>
       {/* Font links */}
       <link
