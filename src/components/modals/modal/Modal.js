@@ -10,7 +10,7 @@ import red from '../../../assets/red.png';
 import yellow from '../../../assets/yellow.png';
 import green from '../../../assets/green.png';
 
-const Modal = ({ title }) => {
+const Modal = ({ title, toggle }) => {
     const [openIcon, setOpenIcon] = useState(false);
 
     const handleOpenIcon = () => {
@@ -23,17 +23,17 @@ const Modal = ({ title }) => {
     };
 
     const [icons, setIcons] = useState([
-        { id: 0, src: bus, alt:"bus" },
-        { id: 1, src: electricity, alt:"electricity" },
-        { id: 2, src: rent, alt:"rent"},
-        { id: 3, src: food, alt:"food" },
+        { id: 0, src: bus, alt: "bus" },
+        { id: 1, src: electricity, alt: "electricity" },
+        { id: 2, src: rent, alt: "rent" },
+        { id: 3, src: food, alt: "food" },
     ]);
 
     const [colors, setColors] = useState([
-        { id: 0, src: blue , alt:"blue"},
-        { id: 1, src: yellow, alt:"yellow"},
-        { id: 2, src: red, alt:"red" },
-        { id: 3, src: green, alt:"green"},
+        { id: 0, src: blue, alt: "blue" },
+        { id: 1, src: yellow, alt: "yellow" },
+        { id: 2, src: red, alt: "red" },
+        { id: 3, src: green, alt: "green" },
     ]);
 
     return (
@@ -49,14 +49,14 @@ const Modal = ({ title }) => {
                         <div className='field'>
                             <p>Color</p>
                             <button className='dropdown' onClick={handleOpenIcon}>
-                                <img src={bus} alt='bus'/>
+                                <img src={bus} alt='bus' />
                                 {
                                     openIcon ? (
                                         <div className="icon-color-dropdown">
                                             {icons.map((i) => (
                                                 <div key={i.id}>
                                                     <button className='icon-color-dropdown-item'>
-                                                        <img src={i.src} alt={i.alt}/>
+                                                        <img src={i.src} alt={i.alt} />
                                                     </button>
                                                 </div>
                                             ))}
@@ -80,7 +80,7 @@ const Modal = ({ title }) => {
                                         <div className="icon-color-dropdown">
                                             {colors.map((i) => (
                                                 <button className='icon-color-dropdown-item' key={i.id}>
-                                                    <img src={i.src} alt={i.alt}/>
+                                                    <img src={i.src} alt={i.alt} />
                                                 </button>
                                             ))}
                                         </div>
@@ -90,15 +90,14 @@ const Modal = ({ title }) => {
                         </div>
                     </div>
                 </div>
-                {/* go back somehow 
+                {/* 
                 * buttons are too tall
                 */}
                 <div className='footer'>
-                    <button className='primary-outlined'>Cancel</button>
-                    <button className='primary' >Save</button>
+                    <button className='primary-outlined' onClick={()=>{toggle(false, '')}}>Cancel</button>
+                    <button className='primary' onClick={()=>{toggle(false, '')}}>Save</button>
                 </div>
             </div>
-
         </div>
     );
 }

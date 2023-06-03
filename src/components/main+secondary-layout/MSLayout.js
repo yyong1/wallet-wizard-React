@@ -1,9 +1,9 @@
 import './MSLayout.css';
-import bus from '../../assets/icons-color/Bus.png'
 import { Icon } from '@iconify/react';
 import ButtonIcon from '../button-icon/ButtonIcon';
 import { useState } from 'react';
 import Modal from '../modals/modal/Modal';
+import '../modals/modal/Modal.css'
 
 const MSLayout = (props) => {
 
@@ -13,22 +13,23 @@ const MSLayout = (props) => {
 
     const [modal, setModal] = useState(false);
     const [visible, setVisible] = useState('');
-    
-    function toggle() {
-        setModal(true);
-        setVisible("none");
+
+    function toggle(modal, visible) {
+        setModal(modal);
+        setVisible(visible);
     }
 
     return (
 
         <div className="mslayout">
-            {modal && <Modal title={title} />}
-            <div className='main' style={{display:visible}}>
+            {modal &&
+                <Modal title={title} toggle={toggle}/>}
+            <div className='main' style={{ display: visible }}>
                 <div className='title'>
                     <h1>{title}</h1>
                     <div className='buttons'>
                         {/* text here goes in two rows */}
-                        <button className='button-icon' onClick={toggle}>
+                        <button className='button-icon' onClick={() => { toggle(true, 'none') }}>
                             <Icon icon="pixelarticons:plus" />
                             Add {title.toLowerCase()}
                         </button>
@@ -49,8 +50,8 @@ const MSLayout = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="secondary" style={{display:visible}}>
-                <h2>{}</h2>
+            <div className="secondary" style={{ display: visible }}>
+                <h2>{ }</h2>
                 <div className='secondary-items'>
                     <div className='card-list'>
                         {secondary.map((i) => (
