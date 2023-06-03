@@ -20,42 +20,6 @@
   align-items: center;
 }
 
-.main-items {
-  background-color: var(--secondary);
-  width: 98%;
-  padding: 1%;
-  border-radius: 10px;
-}
-
-.card-list {
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-auto-rows: minmax(150px, auto);
-  padding: 2%;
-  row-gap: 10%;
-}
-
-.card {
-  padding: 3%;
-  background-color: var(--ww-white);
-  width: 35%;
-  height: 90%;
-  border-radius: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 13px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
-  align-self: center;
-  justify-self: center;
-}
-
-.main .card {
-  width: 20%;
-  height: 70%;
-}
-
 .card img {
   display: block;
   margin-left: auto;
@@ -72,15 +36,65 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
+.main-items {
+  background-color: var(--secondary);
+  width: 100%;
+  padding: 1% 0 1% 0;
+  border-radius: 10px;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-auto-rows: minmax(150px, auto);
+  row-gap: 10%;
+}
+
+.card {
+  padding: 3%;
+  background-color: var(--ww-white);
+  /* width: 35%; */
+  /* height: 90%; */
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 13px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  justify-self: center;
+}
+
+.main .card {
+  width: 20%;
+  height: 80%;
+}
+
 .secondary {
   margin-top: 1%;
   background-color: var(--secondary-darker);
   padding: 2%;
   border-radius: 10px;
+  /**
+  * temporary height, still should fix the title
+  */
+  height:47vh;
 }
 
-.secondary .secondary-items .card-list {
+.secondary-items{
+  width: 98%;
+  padding: 1%;
+}
+
+.secondary-items .card-list {
   grid-template-columns: repeat(5, 20%);
   grid-auto-columns: minmax(auto, auto);
   column-gap: 0;
 }
+
+.secondary .card{
+  width:25%;
+  height: 80%;
+}
+
