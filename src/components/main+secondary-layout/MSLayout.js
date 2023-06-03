@@ -28,7 +28,6 @@ const MSLayout = (props) => {
                     <h1>{title}</h1>
                     <div className='buttons'>
                         {/* text here goes in two rows */}
-                        {/* onClick={() => {toggle('add')}} */}
                         <button className='button-icon' onClick={toggle}>
                             <Icon icon="pixelarticons:plus" />
                             Add {title.toLowerCase()}
@@ -51,7 +50,7 @@ const MSLayout = (props) => {
                 </div>
             </div>
             <div className="secondary" style={{display:visible}}>
-                <h2>utilities</h2>
+                <h2>{}</h2>
                 <div className='secondary-items'>
                     <div className='card-list'>
                         {secondary.map((i) => (

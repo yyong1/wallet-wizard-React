@@ -10,7 +10,7 @@ import red from '../../../assets/red.png';
 import yellow from '../../../assets/yellow.png';
 import green from '../../../assets/green.png';
 
-const Modal = ({title, leftFields, rightFields }) => {
+const Modal = ({ title }) => {
     const [openIcon, setOpenIcon] = useState(false);
 
     const handleOpenIcon = () => {
@@ -22,36 +22,44 @@ const Modal = ({title, leftFields, rightFields }) => {
         setOpenColor(!openColor);
     };
 
+    const [icons, setIcons] = useState([
+        { id: 0, src: bus, alt:"bus" },
+        { id: 1, src: electricity, alt:"electricity" },
+        { id: 2, src: rent, alt:"rent"},
+        { id: 3, src: food, alt:"food" },
+    ]);
+
+    const [colors, setColors] = useState([
+        { id: 0, src: blue , alt:"blue"},
+        { id: 1, src: yellow, alt:"yellow"},
+        { id: 2, src: red, alt:"red" },
+        { id: 3, src: green, alt:"green"},
+    ]);
+
     return (
         <div className="modal-background">
             <div className='modal'>
                 <h1>Add {title.toLowerCase()}</h1>
                 <div className='body'>
                     <div className='half'>
-                        <div>
+                        <div className='field'>
                             <p>Name</p>
                             <input placeholder='category name' required></input>
                         </div>
-                        <div>
+                        <div className='field'>
                             <p>Color</p>
                             <button className='dropdown' onClick={handleOpenIcon}>
-                                <img src={bus}></img>
+                                <img src={bus} alt='bus'/>
                                 {
                                     openIcon ? (
                                         <div className="icon-color-dropdown">
-                                            <button className='icon-color-dropdown-item'>
-                                                <img src={bus} />
-                                            </button>
-                                            <button className='icon-color-dropdown-item'>
-                                                <img src={electricity} />
-                                            </button>
-                                            <button className='icon-color-dropdown-item'>
-                                                <img src={rent} />
-                                            </button>
-                                            <button className='icon-color-dropdown-item'>
-                                                <img src={food} />
-
-                                            </button>
+                                            {icons.map((i) => (
+                                                <div key={i.id}>
+                                                    <button className='icon-color-dropdown-item'>
+                                                        <img src={i.src} alt={i.alt}/>
+                                                    </button>
+                                                </div>
+                                            ))}
                                         </div>
                                     ) : null
                                 }
@@ -59,30 +67,22 @@ const Modal = ({title, leftFields, rightFields }) => {
                         </div>
                     </div>
                     <div className='half'>
-                        <div>
+                        <div className='field'>
                             <p>Parent category</p>
                             <input placeholder='groceries'></input>
                         </div>
-                        <div>
+                        <div className='field'>
                             <p>Color</p>
                             <button className='dropdown' onClick={handleOpenColor}>
                                 <img src={palette}></img>
                                 {
                                     openColor ? (
                                         <div className="icon-color-dropdown">
-                                            <button className='icon-color-dropdown-item'>
-                                                <img src={blue} />
-                                            </button>
-                                            <button className='icon-color-dropdown-item'>
-                                                <img src={yellow} />
-                                            </button>
-                                            <button className='icon-color-dropdown-item'>
-                                                <img src={green} />
-                                            </button>
-                                            <button className='icon-color-dropdown-item'>
-                                                <img src={red} />
-
-                                            </button>
+                                            {colors.map((i) => (
+                                                <button className='icon-color-dropdown-item' key={i.id}>
+                                                    <img src={i.src} alt={i.alt}/>
+                                                </button>
+                                            ))}
                                         </div>
                                     ) : null
                                 }
