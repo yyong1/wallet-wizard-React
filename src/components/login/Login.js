@@ -45,7 +45,7 @@ const Login = () => {
                                 </div>
                             ))}
                         </div>
-                        <p style={{ textAlign: "center" }}>Don't have an account?</p>
+                        <p style={{ textAlign: "center", fontWeight:"normal" }}>Don't have an account?</p>
                         <a onClick={register} style={{ paddingTop: "0" }}>Sign up</a>
                         <div className='buttons'>
                             <button className='primary-outlined' onClick={home}>

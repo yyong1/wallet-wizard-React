@@ -67,10 +67,10 @@ const Registration = () => {
                             ) : null}
                         </div>
                     </div>
-                    <p style={{ textAlign: "center" }}>Already have an account?</p>
+                    <p style={{ textAlign: "center", fontWeight:"normal" }}>Already have an account?</p>
                     <a onClick={login} style={{ paddingTop: "0" }}>Log in</a>
                     <div className='buttons'>
-                        <button className='primary-outlined' onClick={home}>
+                        <button className='primary-outlined' onClick={home} >
                             Cancel
                         </button>
                         <button className='primary' onClick={expenses}>
