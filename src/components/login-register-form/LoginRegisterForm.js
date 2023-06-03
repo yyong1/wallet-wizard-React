@@ -10,6 +10,10 @@ const LoginRegisterForm = ({ fields, title, p, a, buttonText, redirectPr, redire
         navigate('/')
     };
 
+    const expenses = () => {
+        navigate('/expenses')
+    }
+
     return (
         <div style={{ display: "flex", justifyContent: "start", margin: "auto" }}>
             <div>
@@ -39,10 +43,10 @@ const LoginRegisterForm = ({ fields, title, p, a, buttonText, redirectPr, redire
                     <a href={redirectA} style={{ paddingTop: "0" }}>{a}</a>
                     <div className='buttons'>
                         <button className='primary-outlined' onClick={nav}>
-                            <p>Cancel</p>
+                            Cancel
                         </button>
-                        <button className='primary' >
-                            <p>{buttonText}</p>
+                        <button className='primary' onClick={expenses}>
+                            {buttonText}
                         </button>
                     </div>
                 </form>

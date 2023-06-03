@@ -5,6 +5,7 @@
   background-color: var(--ww-white);
   border-radius: 10px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);}
+  
 
 .login-register-form .title {
   background-color: var(--primary);
@@ -14,6 +15,12 @@
   font-size: large;
   max-width: 100%;
   border-radius: 10px 10px 0px 0px;
+  justify-content: center;
+}
+
+.login-register-form .title h1{
+  color: var(--ww-white);
+  padding: 3%;
 }
 
 .login-register-form .form {
@@ -22,26 +29,6 @@
   padding: 10%;
   margin: auto;
 }
-
-.login-register-form .form half {
-  padding: 2%;
-  max-width: 48%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* .login-register-form .form input {
-  margin: 2%;
-  width: 90%;
-  padding: 5px;
-  border: 1px solid #50514f;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  font-family: "Inconsoloata", monospace;
-  font-weight: 500;
-  font-size: 18px;
-  color: var(--ww-black);
-} */
 
 .login-register-form .form p {
   font-weight: 600;
