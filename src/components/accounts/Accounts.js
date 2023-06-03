@@ -6,6 +6,8 @@ import bus from '../../assets/icons-color/Bus.png';
 import electricity from '../../assets/icons-color/Electricity.png';
 import rent from '../../assets/icons-color/Rent.png';
 import food from '../../assets/icons-color/Food.png';
+import paycheck from '../../assets/icons-color/Check Book.png';
+import bonus from '../../assets/icons-color/Get Cash.png';
 import { Icon } from '@iconify/react';
 import './Accounts.css';
 import Modal from '../modals/modal/Modal';
@@ -71,48 +73,48 @@ const Accounts = () => {
                         </div>
                         <div className='list-item' style={{ background: "#dadefa" }}>
                             <div className='icon-label'>
-                                <img src={bus} />
-                                <p >label</p>
+                                <img src={food} />
+                                <p >food</p>
                             </div>
-                            <p>69</p>
+                            <p>55</p>
                         </div>
                         <div className='list-item' style={{ background: "#FCD7D7" }}>
                             <div className='icon-label'>
                                 <img src={bus} />
-                                <p >label</p>
+                                <p >transport</p>
                             </div>
-                            <p>69</p>
+                            <p>20</p>
                         </div>
                         <div className='total'>
                             <h2>total</h2>
-                            <h2>600</h2>
+                            <h2>75</h2>
                         </div>
                     </div>
                     <div className='half'>
                         <div className='status'>
-                            <p>expenses:</p>
+                            <p>income:</p>
                             <div>
-                                <p>Started with:</p>
-                                <h2>300</h2>
+                                <p>Current amount:</p>
+                                <h2>1025</h2>
                             </div>
                         </div>
-                        <div className='list-item' style={{ background: "#dadefa" }}>
+                        <div className='list-item' style={{ background: "#D7D8E7" }}>
                             <div className='icon-label'>
-                                <img src={bus} />
-                                <p >label</p>
+                                <img src={paycheck} />
+                                <p >paycheck</p>
                             </div>
-                            <p>69</p>
+                            <p>700</p>
                         </div>
-                        <div className='list-item' style={{ background: "#FCD7D7" }}>
+                        <div className='list-item' style={{ background: "#E2B6B6" }}>
                             <div className='icon-label'>
-                                <img src={bus} />
-                                <p >label</p>
+                                <img src={bonus} />
+                                <p >bonus</p>
                             </div>
                             <p>69</p>
                         </div>
                         <div className='total'>
                             <h2>total</h2>
-                            <h2>600</h2>
+                            <h2>800</h2>
                         </div>
                     </div>
                 </div>

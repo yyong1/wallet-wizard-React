@@ -59,6 +59,11 @@
   border-radius: 10px;
 }
 
+.accounts .list-item:hover {
+  border: 3px solid #b3cfb5;
+  border-radius: 10px;
+}
+
 .accounts .list-item p {
   margin-right: 10%;
 }
@@ -93,6 +98,6 @@
   align-items: end;
 }
 
-.accounts .total h2{
+.accounts .total h2 {
   padding-right: 13%;
 }
