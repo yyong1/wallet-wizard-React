@@ -12,6 +12,7 @@ import { Icon } from '@iconify/react';
 import './Accounts.css';
 import Modal from '../modals/modal/Modal';
 import wizard from '../../small-wizard.png';
+import { useNavigate } from 'react-router-dom';
 
 const Accounts = () => {
     const [main, setMain] = useState([
@@ -39,28 +40,38 @@ const Accounts = () => {
     const single = 'account';
 
     const [secondaryTitle, setSecondaryTitle] = useState('Cash');
-        function changeTitle(secondaryTitle) {
+    function changeTitle(secondaryTitle) {
         setSecondaryTitle(secondaryTitle);
+    }
+
+    const navigate = useNavigate();
+
+    const navExpenses = () => {
+        navigate('/expenses');
+    };
+
+    const navIncome = () => {
+        navigate('/income');
     }
 
     return (
         <div className="accounts">
-            {modal && <Modal title={title} toggle={toggle} single={single} placeholder='cash'/>}
+            {modal && <Modal title={title} toggle={toggle} single={single} placeholder='cash' />}
             <div className='main' style={{ display: visible }}>
                 <div className='title'>
                     <h1>{title}</h1>
                     <div className='buttons'>
                         {/* text here goes in two rows */}
-                        <button className='button-icon' onClick={()=>{toggle(true, 'none')}}>
+                        <button className='button-icon' onClick={() => { toggle(true, 'none') }}>
                             <Icon icon="pixelarticons:plus" />
                             Add {title.toLowerCase()}
                         </button>
                     </div>
                 </div>
-                <div className='main-items' style={{borderRadius:"10px"}}>
+                <div className='main-items' style={{ borderRadius: "10px" }}>
                     <div className='card-list'>
                         {main.map((i) => (
-                            <button key={i.id} className='card' style={{ width: "15%" }} onClick={()=>{setSecondaryTitle(i.label)}}>
+                            <button key={i.id} className='card' style={{ width: "15%" }} onClick={() => { setSecondaryTitle(i.label) }}>
                                 <img src={i.icon}></img>
                                 <p>{i.label}</p>
                             </button>
@@ -68,66 +79,66 @@ const Accounts = () => {
                     </div>
                 </div>
             </div>
-            <div className='secondary' style={{display:visible}}>
+            <div className='secondary' style={{ display: visible }}>
                 <h2>{secondaryTitle}</h2>
                 <div className='secondary-items'>
                     <div className='half'>
                         <div className='status'>
-                            <p>expenses:</p>
+                            <h2>expenses:</h2>
                             <div>
                                 <p>Started with:</p>
                                 <h2>300</h2>
                             </div>
                         </div>
-                        <div className='list-item' style={{ background: "#dadefa" }}>
+                        <div className='list-item' style={{ background: "#dadefa" }} onClick={navExpenses}>
                             <div className='icon-label'>
                                 <img src={food} />
                                 <p >food</p>
                             </div>
                             <p>55</p>
                         </div>
-                        <div className='list-item' style={{ background: "#FCD7D7" }}>
+                        <div className='list-item' style={{ background: "#FCD7D7" }} onClick={navExpenses}>
                             <div className='icon-label'>
                                 <img src={bus} />
                                 <p >transport</p>
                             </div>
                             <p>20</p>
                         </div>
-                        <div className='total'>
+                        <div className='total' style={{ borderColor: "#FF1919", borderWidth: "3px", backgroundColor: "#FFCBCB" }}>
                             <h2>total</h2>
                             <h2>75</h2>
                         </div>
                     </div>
                     <div className='half'>
-                        <div className='status'>
-                            <p>income:</p>
+                        <div className='status' >
+                            <h2>income:</h2>
                             <div>
                                 <p>Current amount:</p>
                                 <h2>1025</h2>
                             </div>
                         </div>
-                        <div className='list-item' style={{ background: "#D7D8E7" }}>
+                        <div className='list-item' style={{ background: "#D7D8E7" }} onClick={navIncome}>
                             <div className='icon-label'>
                                 <img src={paycheck} />
                                 <p >paycheck</p>
                             </div>
                             <p>700</p>
                         </div>
-                        <div className='list-item' style={{ background: "#E2B6B6" }}>
+                        <div className='list-item' style={{ background: "#E2B6B6" }} onClick={navIncome}>
                             <div className='icon-label'>
                                 <img src={bonus} />
                                 <p >bonus</p>
                             </div>
-                            <p>69</p>
+                            <p>100</p>
                         </div>
-                        <div className='total'>
+                        <div className='total' style={{ borderColor: "#16E28B", borderWidth: "3px", backgroundColor: "#CAFEE8" }}>
                             <h2>total</h2>
                             <h2>800</h2>
                         </div>
                     </div>
                 </div>
                 <div className='wizard'>
-                    <img src={wizard}/>
+                    <img src={wizard} />
                 </div>
             </div>
         </div>

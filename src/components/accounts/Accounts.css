@@ -41,9 +41,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 90%;
+  width: 82%;
   margin: 3%;
   align-items: end;
+  border: 2px solid var(--ww-white);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  padding: 2%;
+  background-color: var(--ww-white);
 }
 
 .accounts .list-item {
@@ -58,11 +63,14 @@
   padding: 1%;
 
   border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+
 }
 
 .accounts .list-item:hover {
   border: 3px solid #b3cfb5;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .accounts .list-item p {
@@ -94,9 +102,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 90%;
+  width: 82%;
   margin: 3%;
   align-items: end;
+  border: 2px solid var(--ww-white);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  padding: 2%;
+  background-color: var(--ww-white);
 }
 
 .accounts .total h2 {
