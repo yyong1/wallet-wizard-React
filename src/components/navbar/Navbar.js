@@ -35,8 +35,8 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
-            <h2>
-                <a onClick={homepage}>WalletWizard</a>
+            <h2 onClick={homepage}>
+                WalletWizard
             </h2>
             <a onClick={expenses}>Expenses</a>
             <a onClick={income}>Income</a>
@@ -44,7 +44,7 @@ const Navbar = () => {
             <a onClick={accounts}>Accounts</a>
             <a onClick={achievements}>Achievements</a>
             <div className='buttons'>
-                <button className='primary' style={{marginRight:"0"}}>
+                <button onClick={homepage} className='primary' style={{marginRight:"0"}}>
                     Log out
                 </button>
                 <button className='primary-outlined'>
