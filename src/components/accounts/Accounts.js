@@ -15,9 +15,9 @@ import wizard from '../../small-wizard.png';
 
 const Accounts = () => {
     const [main, setMain] = useState([
-        { id: 0, label: "cash", icon: cash },
-        { id: 1, label: "card", icon: card },
-        { id: 2, label: "savings", icon: savings }
+        { id: 0, label: "Cash", icon: cash },
+        { id: 1, label: "Card", icon: card },
+        { id: 2, label: "Savings", icon: savings }
     ])
 
     const [expenses, setExpenses] = useState([
@@ -37,6 +37,12 @@ const Accounts = () => {
 
     const title = 'Accounts';
     const single = 'account';
+
+    const [secondaryTitle, setSecondaryTitle] = useState('Cash');
+        function changeTitle(secondaryTitle) {
+        setSecondaryTitle(secondaryTitle);
+    }
+
     return (
         <div className="accounts">
             {modal && <Modal title={title} toggle={toggle} single={single} placeholder='cash'/>}
@@ -54,16 +60,16 @@ const Accounts = () => {
                 <div className='main-items' style={{borderRadius:"10px"}}>
                     <div className='card-list'>
                         {main.map((i) => (
-                            <div key={i.id} className='card' style={{ width: "15%" }}>
+                            <button key={i.id} className='card' style={{ width: "15%" }} onClick={()=>{setSecondaryTitle(i.label)}}>
                                 <img src={i.icon}></img>
                                 <p>{i.label}</p>
-                            </div>
+                            </button>
                         ))}
                     </div>
                 </div>
             </div>
             <div className='secondary' style={{display:visible}}>
-                <h1>Cash</h1>
+                <h2>{secondaryTitle}</h2>
                 <div className='secondary-items'>
                     <div className='half'>
                         <div className='status'>
