@@ -50,7 +50,7 @@ const Accounts = () => {
                         </button>
                     </div>
                 </div>
-                <div className='main-items'>
+                <div className='main-items' style={{borderRadius:"10px"}}>
                     <div className='card-list'>
                         {main.map((i) => (
                             <div key={i.id} className='card' style={{ width: "15%" }}>
