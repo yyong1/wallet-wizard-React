@@ -1,6 +1,7 @@
 :root {
   --primary: #9f4eca;
   --secondary: #cfb3cd;
+  --secondary-darker: #b79eb5;
   --accent-primary: #4eca9f;
   --accent-primary-hover: #4abf97;
   --accent-secondary: #b3cfb5;
@@ -8,7 +9,7 @@
   --ww-black: #50514f;
   --ww-white: #f6f8ff;
   --ww-grey: #a6a2a2;
-  --hover: #dadff2;
+  --hover-blue: #dadff2;
 }
 
 /**
@@ -32,6 +33,7 @@ h2 {
 
 h1 {
   font-family: "Inconsolata", monospace;
+  color: var(--ww-black);
   margin: 0;
   padding: 5px;
   font-weight: 700;
@@ -43,21 +45,22 @@ body {
 }
 
 button {
-  padding: 0.5%;
+  padding: 3%;
   margin-left: 5%;
   margin-right: 5%;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
-  border:0
+  border: 0;
+  border-radius: 10px;
+  font-family: "Inconsolata", monospace;
+  color: var(--ww-black);
 }
 
-button:active{
+button:active {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
 button.primary {
   background-color: var(--accent-primary);
-  border-radius: 10px;
-  border: 0;
 }
 
 button.primary:hover {
@@ -68,11 +71,132 @@ button.primary:hover {
 button.primary-outlined {
   background-color: var(--ww-white);
   border-color: var(--accent-primary);
-  border-radius: 10px;
-  border:1px solid #4abf97
+  border: 1px solid #4abf97;
+  color: var(--accent-primary);
 }
 
 button.primary-outlined:hover {
   background-color: var(--accent-primary);
+  color: var(--ww-black);
   cursor: pointer;
+}
+
+button.secondary {
+  background-color: var(--accent-secondary);
+}
+
+button.secondary:hover {
+  background-color: var(--accent-secondary-hover);
+  cursor: pointer;
+}
+
+button.button-icon {
+  background-color: var(--accent-secondary);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 37%;
+}
+
+button.button-icon:hover {
+  background-color: var(--accent-secondary-hover);
+  cursor: pointer;
+}
+
+input {
+  width: 90%;
+  padding: 5px;
+  border: 1px solid #50514f;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: "Inconsoloata", monospace;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--ww-black);
+}
+
+button.dropdown {
+  background-color: white;
+  width: 90%;
+  margin: 1%;
+  border: 1px solid #50514f;
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: medium;
+  color: var(--ww-grey);
+}
+
+button.dropdown:hover {
+  background-color: var(--hover-blue);
+  cursor: pointer;
+}
+
+button.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 1%;
+  padding: 3%;
+  background-color: white;
+  border: 1px solid var(--ww-black);
+  border-radius: 4px;
+  padding: 2% 5% 2% 5%;
+  font-size: medium;
+}
+
+button.dropdown-item:hover {
+  background-color: var(--hover-blue);
+}
+
+button.icon-color-dropdown{
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  padding: 3%;
+  background-color: white;
+  border: 1px solid var(--ww-black);
+  border-radius: 15%;
+}
+
+.icon-color-dropdown {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+
+.icon-color-dropdown:hover {
+  background-color: var(--hover-blue);
+}
+
+.icon-color-dropdown-item {
+  border: 10px black;
+  width: 100%;
+  background-color: var(--ww-white);
+}
+
+.icon-color-dropdown-item:hover{
+  background-color: var(--secondary);
+}
+
+.icon-color-dropdown-item img {
+  width: 80%;
+  height: 80%;
+  padding: 2px;
+}
+
+.wizard {
+  float: left;
+  position: fixed;
+  bottom: 4%;
+  left: 3%;
+}
+
+.wizard:hover {
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--ww-white);
+  border-radius: 10px;
 }

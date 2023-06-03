@@ -1,5 +1,24 @@
 .registration{
-    padding-top: 4%;
+    padding-top: 7%;
     padding-bottom: 4%;
     background-color: var(--secondary);
+    height: 100vh;
+}
+
+.registration input{
+    width: 90%;
+    margin: 1%;
+}
+
+.registration button.dropdown{
+    width: 93%;
+    margin: 1% 1% 0 1%;
+    border-radius: 4px;
+    padding: 2% 5% 2% 5%;
+}
+
+.registration button.dropdown-item{
+    width: 93%;
+    margin: 0 1% 0 1%;
+    box-shadow: none;
 }

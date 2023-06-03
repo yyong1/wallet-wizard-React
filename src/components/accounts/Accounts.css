@@ -1,0 +1,117 @@
+.accounts {
+  margin: 3%;
+  padding-top: 3%;
+}
+
+.accounts .card {
+  width: 15%;
+}
+
+.accounts .card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-auto-rows: minmax(150px, auto);
+  padding: 0.5%;
+  row-gap: 10%;
+}
+
+.accounts .secondary {
+  position: absolute;
+  width: 90%;
+  height: 60%;
+  background: #b79eb5;
+  border-radius: 10px;
+}
+
+.accounts .secondary-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accounts .half {
+  width: 50%;
+}
+
+.accounts .status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 82%;
+  margin: 3%;
+  align-items: end;
+  border: 2px solid var(--ww-white);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  padding: 2%;
+  background-color: var(--ww-white);
+}
+
+.accounts .list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 120px;
+
+  width: 85%;
+  height: 9%;
+  margin: 3%;
+  padding: 1%;
+
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+
+}
+
+.accounts .list-item:hover {
+  border: 3px solid #b3cfb5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.accounts .list-item p {
+  margin-right: 10%;
+}
+
+.accounts .icon-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 90%;
+  margin: 1%;
+  align-items: center;
+}
+
+.accounts .icon-label p {
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-left: 3%;
+}
+
+.accounts .list-item p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.accounts .total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 82%;
+  margin: 3%;
+  align-items: end;
+  border: 2px solid var(--ww-white);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  padding: 2%;
+  background-color: var(--ww-white);
+}
+
+.accounts .total h2 {
+  padding-right: 13%;
+}
