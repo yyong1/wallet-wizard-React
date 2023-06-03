@@ -35,9 +35,10 @@ const Accounts = () => {
     }
 
     const title = 'Accounts';
+    const single = 'account';
     return (
         <div className="accounts">
-            {modal && <Modal title={title} toggle={toggle}/>}
+            {modal && <Modal title={title} toggle={toggle} single={single} placeholder='cash'/>}
             <div className='main' style={{ display: visible }}>
                 <div className='title'>
                     <h1>{title}</h1>

@@ -10,7 +10,7 @@ import red from '../../../assets/red.png';
 import yellow from '../../../assets/yellow.png';
 import green from '../../../assets/green.png';
 
-const Modal = ({ title, toggle }) => {
+const Modal = ({ title, toggle, single, placeholder }) => {
     const [openIcon, setOpenIcon] = useState(false);
 
     const handleOpenIcon = () => {
@@ -39,15 +39,15 @@ const Modal = ({ title, toggle }) => {
     return (
         <div className="modal-background">
             <div className='modal'>
-                <h1>Add {title.toLowerCase()}</h1>
+                <h1>Add {single}</h1>
                 <div className='body'>
                     <div className='half'>
                         <div className='field'>
-                            <p>Name</p>
-                            <input placeholder='category name' required></input>
+                            <p>Name *</p>
+                            <input placeholder= {single + ' name'} required></input>
                         </div>
                         <div className='field'>
-                            <p>Color</p>
+                            <p>Icon</p>
                             <button className='dropdown' onClick={handleOpenIcon}>
                                 <img src={bus} alt='bus' />
                                 {
@@ -68,8 +68,8 @@ const Modal = ({ title, toggle }) => {
                     </div>
                     <div className='half'>
                         <div className='field'>
-                            <p>Parent category</p>
-                            <input placeholder='groceries'></input>
+                            <p>Parent {single}</p>
+                            <input placeholder={placeholder}/>
                         </div>
                         <div className='field'>
                             <p>Color</p>

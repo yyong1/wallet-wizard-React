@@ -34,6 +34,7 @@
   width: 100%;
   height: fit-content;
   padding: 2% 5% 2% 5%;
+  text-align: center;
 }
 
 .half {
@@ -57,4 +58,9 @@ p {
 
 .field p {
   margin: 2% 0 2% 0;
+}
+
+.footer button{
+  display: inline-block;
+  text-align: center;
 }

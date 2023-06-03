@@ -44,7 +44,7 @@ const Categories = () => {
         <div className="categories">
             {/* <MSLayout title="Categories" main={main} secondary={secondary}></MSLayout> */}
             {modal &&
-                <Modal title={title} toggle={toggle} />}
+                <Modal title={title} toggle={toggle} single={single} placeholder='groceries'/>}
             <div className='main' style={{ display: visible }}>
                 <div className='title'>
                     <h1>{title}</h1>
