@@ -1,7 +1,7 @@
 :root {
   --primary: #9f4eca;
   --secondary: #cfb3cd;
-  --secondary-darker: #B79EB5;
+  --secondary-darker: #b79eb5;
   --accent-primary: #4eca9f;
   --accent-primary-hover: #4abf97;
   --accent-secondary: #b3cfb5;
@@ -49,13 +49,13 @@ button {
   margin-left: 5%;
   margin-right: 5%;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
-  border:0;
+  border: 0;
   border-radius: 10px;
-  font-family: 'Inconsolata', monospace;
-  color:var(--ww-black)
+  font-family: "Inconsolata", monospace;
+  color: var(--ww-black);
 }
 
-button:active{
+button:active {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -71,7 +71,7 @@ button.primary:hover {
 button.primary-outlined {
   background-color: var(--ww-white);
   border-color: var(--accent-primary);
-  border:1px solid #4abf97;
+  border: 1px solid #4abf97;
   color: var(--accent-primary);
 }
 
@@ -81,16 +81,16 @@ button.primary-outlined:hover {
   cursor: pointer;
 }
 
-button.secondary{
+button.secondary {
   background-color: var(--accent-secondary);
 }
 
-button.secondary:hover{
+button.secondary:hover {
   background-color: var(--accent-secondary-hover);
   cursor: pointer;
 }
 
-button.button-icon{
+button.button-icon {
   background-color: var(--accent-secondary);
   display: flex;
   justify-content: space-evenly;
@@ -98,7 +98,7 @@ button.button-icon{
   width: 37%;
 }
 
-button.button-icon:hover{
+button.button-icon:hover {
   background-color: var(--accent-secondary-hover);
   cursor: pointer;
 }
@@ -115,23 +115,50 @@ input {
   color: var(--ww-black);
 }
 
-.icon-color-dropdown{
+.icon-color-dropdown {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 10px;
 }
 
-.icon-color-dropdown:hover{
+.icon-color-dropdown:hover {
   background-color: var(--hover-blue);
 }
 
-.dropdown{
-  background-color: var(--ww-white);
+button.dropdown {
+  background-color: white;
+  width: 90%;
+  margin: 1%;
+  border: 1px solid #50514f;
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: medium;
+  color: var(--ww-grey);
 }
 
-.dropdown:hover{
+button.dropdown:hover {
   background-color: var(--hover-blue);
   cursor: pointer;
+}
+
+button.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 1%;
+  padding: 3%;
+  background-color: white;
+  border: 1px solid var(--ww-black);
+  border-radius: 4px;
+  padding: 2% 5% 2% 5%;
+  font-size: medium;
+}
+
+button.dropdown-item:hover {
+  background-color: var(--hover-blue);
 }
 
 .icon-color-dropdown-item {

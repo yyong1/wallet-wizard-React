@@ -37,7 +37,7 @@
 /*
 * not finished
 */
-.login-register-form .form button.dropdown {
+/* .login-register-form .form button.dropdown {
   margin: 2%;
   width: 90%;
   padding: 5px;
@@ -50,7 +50,7 @@
   font-size: 18px;
   text-align: start;
   color: var(--ww-black);
-}
+} */
 
 .login-register-form .buttons {
   padding: 4%;
@@ -84,6 +84,6 @@ a:hover {
   cursor: pointer;
 }
 
-.login-register-form .form .dropdown input{
+/* .login-register-form .form .dropdown input{
   cursor: pointer;
-}
+} */
