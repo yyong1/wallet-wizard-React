@@ -10,6 +10,7 @@ import { useState } from "react";
 import Modal from "../modals/modal/Modal";
 import { Icon } from "@iconify/react";
 import './Categories.css';
+import wizard from '../../small-wizard.png';
 
 const Categories = () => {
 
@@ -25,11 +26,14 @@ const Categories = () => {
     ])
 
     const [secondary, setSecondary] = useState([
-        { id: 0, label: 'electricity', icon: electricity },
+        { id: 0, label: 'power', icon: electricity },
         { id: 1, label: 'water', icon: water },
         { id: 2, label: 'internet', icon: internet },
         { id: 3, label: 'phone', icon: phone },
-        { id: 4, label: 'subscriptions', icon: netflix },
+        { id: 4, label: 'netflix', icon: netflix },
+        { id: 5, label: 'power', icon: electricity },
+        { id: 6, label: 'water', icon: water },
+        { id: 7, label: 'internet', icon: internet },
     ])
 
     const [modal, setModal] = useState(false);
@@ -44,7 +48,7 @@ const Categories = () => {
         <div className="categories">
             {/* <MSLayout title="Categories" main={main} secondary={secondary}></MSLayout> */}
             {modal &&
-                <Modal title={title} toggle={toggle} single={single} placeholder='groceries'/>}
+                <Modal title={title} toggle={toggle} single={single} placeholder='groceries' />}
             <div className='main' style={{ display: visible }}>
                 <div className='title'>
                     <h1>{title}</h1>
@@ -82,6 +86,9 @@ const Categories = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+                <div className='wizard'>
+                    <img src={wizard} />
                 </div>
             </div>
         </div>

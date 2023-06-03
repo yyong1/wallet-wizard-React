@@ -27,7 +27,7 @@ const Homepage = () => {
                 <div className='bubble' style={{ padding: "1%", marginRight: "33%", marginTop: "1.5%" }}></div>
                 <div style={{ display: "flex", justifyContent: "flex-start" }}>
                     <h2 style={{ marginTop: "8%", marginLeft: "4%" }}>{par}</h2>
-                    <img src={logo} className='wizard'></img>
+                    <img src={logo}></img>
                 </div>
             </div>
         </div>

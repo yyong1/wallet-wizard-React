@@ -11,6 +11,7 @@ import bonus from '../../assets/icons-color/Get Cash.png';
 import { Icon } from '@iconify/react';
 import './Accounts.css';
 import Modal from '../modals/modal/Modal';
+import wizard from '../../small-wizard.png';
 
 const Accounts = () => {
     const [main, setMain] = useState([
@@ -118,6 +119,9 @@ const Accounts = () => {
                             <h2>800</h2>
                         </div>
                     </div>
+                </div>
+                <div className='wizard'>
+                    <img src={wizard}/>
                 </div>
             </div>
         </div>

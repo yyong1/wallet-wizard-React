@@ -4,3 +4,8 @@
   background-color: var(--secondary);
   height: 100vh;
 }
+
+.login input{
+  width: 90%;
+  margin: 1%;
+}
