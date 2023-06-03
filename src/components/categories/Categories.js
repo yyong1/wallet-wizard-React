@@ -1,4 +1,3 @@
-import MSLayout from "../main+secondary-layout/MSLayout";
 import bus from '../../assets/icons-color/Bus.png';
 import electricity from '../../assets/icons-color/Electricity.png';
 import rent from '../../assets/icons-color/Rent.png';
@@ -8,9 +7,14 @@ import internet from '../../assets/icons-color/Internet.png';
 import phone from '../../assets/icons-color/iPhone SE.png';
 import netflix from '../../assets/icons-color/Netflix.png';
 import { useState } from "react";
-
+import Modal from "../modals/modal/Modal";
+import { Icon } from "@iconify/react";
+import './Categories.css';
 
 const Categories = () => {
+
+    const title = 'Categories';
+    const single = 'category';
 
     const [main, setMain] = useState([
         { id: 0, label: 'transport', icon: bus },
@@ -28,9 +32,58 @@ const Categories = () => {
         { id: 4, label: 'subscriptions', icon: netflix },
     ])
 
+    const [modal, setModal] = useState(false);
+    const [visible, setVisible] = useState('');
+
+    function toggle(modal, visible) {
+        setModal(modal);
+        setVisible(visible);
+    }
+
     return (
         <div className="categories">
-            <MSLayout title="Categories" main={main} secondary={secondary}></MSLayout>
+            {/* <MSLayout title="Categories" main={main} secondary={secondary}></MSLayout> */}
+            {modal &&
+                <Modal title={title} toggle={toggle} />}
+            <div className='main' style={{ display: visible }}>
+                <div className='title'>
+                    <h1>{title}</h1>
+                    <div className='buttons'>
+                        {/* text here goes in two rows */}
+                        <button className='button-icon' onClick={() => { toggle(true, 'none') }}>
+                            <Icon icon="pixelarticons:plus" />
+                            Add {title.toLowerCase()}
+                        </button>
+                        <button className='button-icon' >
+                            <Icon icon="pixelarticons:edit-box" />
+                            Edit {title.toLowerCase()}
+                        </button>
+                    </div>
+                </div>
+                <div className='main-items'>
+                    <div className='card-list'>
+                        {main.map((i) => (
+                            <div key={i.id} className='card'>
+                                <img src={i.icon}></img>
+                                <p>{i.label}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            <div className="secondary" style={{ display: visible }}>
+                <h2>{ }</h2>
+                <div className='secondary-items'>
+                    <div className='card-list'>
+                        {secondary.map((i) => (
+                            <div key={i.id} className='card'>
+                                <img src={i.icon}></img>
+                                <p>{i.label}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
