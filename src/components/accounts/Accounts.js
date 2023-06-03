@@ -60,9 +60,9 @@ const Accounts = () => {
             </div>
             <div className='secondary' style={{display:visible}}>
                 <h1>Cash</h1>
-                <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "90%", alignItems: "center", marginLeft:"auto", marginRight:"auto"  }}>
+                <div className='secondary-items'>
                     <div className='half'>
-                        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "90%", margin: "3%", alignItems: "end" }}>
+                        <div className='status'>
                             <p>expenses:</p>
                             <div>
                                 <p>Started with:</p>
@@ -70,26 +70,26 @@ const Accounts = () => {
                             </div>
                         </div>
                         <div className='list-item' style={{ background: "#dadefa" }}>
-                            <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-start", width: "90%", margin: "1%", alignItems: "center" }}>
+                            <div className='icon-label'>
                                 <img src={bus} />
-                                <p style={{ marginBottom: "auto", marginTop: "auto", marginLeft: "3%" }}>label</p>
+                                <p >label</p>
                             </div>
-                            <p style={{ marginRight: "10%" }}>69</p>
+                            <p>69</p>
                         </div>
                         <div className='list-item' style={{ background: "#FCD7D7" }}>
-                            <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-start", width: "90%", margin: "1%", alignItems: "center" }}>
+                            <div className='icon-label'>
                                 <img src={bus} />
-                                <p style={{ marginBottom: "auto", marginTop: "auto", marginLeft: "3%" }}>label</p>
+                                <p >label</p>
                             </div>
-                            <p style={{ marginRight: "10%" }}>69</p>
+                            <p>69</p>
                         </div>
-                        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "90%", margin: "3%", alignItems: "end" }}>
+                        <div className='total'>
                             <h2>total</h2>
-                            <h2 style={{paddingRight:"13%"}}>600</h2>
+                            <h2>600</h2>
                         </div>
                     </div>
                     <div className='half'>
-                        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "90%", margin: "3%", alignItems: "end"}}>
+                        <div className='status'>
                             <p>expenses:</p>
                             <div>
                                 <p>Started with:</p>
@@ -97,22 +97,22 @@ const Accounts = () => {
                             </div>
                         </div>
                         <div className='list-item' style={{ background: "#dadefa" }}>
-                            <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-start", width: "90%", margin: "1%", alignItems: "center" }}>
+                            <div className='icon-label'>
                                 <img src={bus} />
-                                <p style={{ marginBottom: "auto", marginTop: "auto", marginLeft: "3%" }}>label</p>
+                                <p >label</p>
                             </div>
-                            <p style={{ marginRight: "10%" }}>69</p>
+                            <p>69</p>
                         </div>
                         <div className='list-item' style={{ background: "#FCD7D7" }}>
-                            <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-start", width: "90%", margin: "1%", alignItems: "center" }}>
+                            <div className='icon-label'>
                                 <img src={bus} />
-                                <p style={{ marginBottom: "auto", marginTop: "auto", marginLeft: "3%" }}>label</p>
+                                <p >label</p>
                             </div>
-                            <p style={{ marginRight: "10%" }}>69</p>
+                            <p>69</p>
                         </div>
-                        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "90%", margin: "3%", alignItems: "end" }}>
+                        <div className='total'>
                             <h2>total</h2>
-                            <h2 style={{paddingRight:"13%"}}>600</h2>
+                            <h2>600</h2>
                         </div>
                     </div>
                 </div>

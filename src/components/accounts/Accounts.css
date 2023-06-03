@@ -22,10 +22,27 @@
   border-radius: 10px;
 }
 
+.accounts .secondary-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .accounts .half {
   width: 50%;
-  /* margin-left: 0;
-  margin-right: auto; */
+}
+
+.accounts .status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 3%;
+  align-items: end;
 }
 
 .accounts .list-item {
@@ -42,8 +59,40 @@
   border-radius: 10px;
 }
 
-.list-item p {
+.accounts .list-item p {
+  margin-right: 10%;
+}
+
+.accounts .icon-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 90%;
+  margin: 1%;
+  align-items: center;
+}
+
+.accounts .icon-label p {
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-left: 3%;
+}
+
+.accounts .list-item p {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
+}
+
+.accounts .total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: 3%;
+  align-items: end;
+}
+
+.accounts .total h2{
+  padding-right: 13%;
 }
