@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Expenses.css';
+// import './Expenses.css';
+import './Exp.css';
 import Chart from '../Chart/Chart';
 // for the text style
 import '../generatedStyle.css';
@@ -11,7 +12,7 @@ const expensesArr = [
   {
     id: 1,
     img: images('./food.png'),
-    name: 'Exp1',
+    name: 'Expfdgdgdgd1',
     amount: 100,
     color: 'red',
   },
@@ -85,6 +86,7 @@ function Expenses() {
     //   </div>
     // </div>
     <>
+      {/* Font links */}
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
@@ -98,35 +100,7 @@ function Expenses() {
       <div className="expenses-container">
         <div className="expenses-expenses">
           <div className="expenses-listoverview">
-
-            {/* EXPENSES LIST */}
-
-            <div className="expenses-frame67">
-
-              {isExpenses?.map((listElement) => (
-                <div className="expenses-listitem">
-                  <div className="expenses-frame91">
-                    <div className="expenses-food">
-                      <img
-                        alt={listElement.name}
-                        src={listElement.img}
-                        className="expenses-food1"
-                      />
-                    </div>
-                    <span className="expenses-text16 Basictext">
-                      <span>{listElement.name}</span>
-                    </span>
-                  </div>
-
-                  <span className="expenses-text18 Basictext"><span>{listElement.amount}</span></span>
-
-                </div>
-              ))}
-
-            </div>
-
             {/* ADD EXPENSES BUTTON */}
-
             <div className="expenses-headersandfooter">
               <span className="expenses-text36 Heading1">
                 <span>Expenses</span>
@@ -142,11 +116,30 @@ function Expenses() {
                 </div>
               </div>
             </div>
-            <div className="expenses-headersandfooter1" />
+            {/* <div className="expenses-headersandfooter1" /> */}
+            {/* EXPENSES LIST */}
+            <div className="expenses-frame67">
+              {isExpenses?.map((listElement) => (
+                <div className="expenses-listitem">
+                  <div className="expenses-frame91">
+                    <div className="expenses-food">
+                      <img
+                        alt={listElement.name}
+                        src={listElement.img}
+                        className="expenses-food1"
+                      />
+                    </div>
+                    <span className="expenses-text16 Basictext">
+                      <span>{listElement.name}</span>
+                    </span>
+                  </div>
+                  <span className="expenses-text18 Basictext"><span>{listElement.amount}</span></span>
+                </div>
+              ))}
+            </div>
+
           </div>
-
           {/* CHART */}
-
           <div className="expenses-frame92">
             <Chart dataExpense={isChartData} />
           </div>
