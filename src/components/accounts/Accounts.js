@@ -8,7 +8,7 @@ import rent from '../../assets/icons-color/Rent.png';
 import food from '../../assets/icons-color/Food.png';
 import { Icon } from '@iconify/react';
 import './Accounts.css';
-import MSLayout from '../main+secondary-layout/MSLayout';
+import Modal from '../modals/modal/Modal';
 
 const Accounts = () => {
     const [main, setMain] = useState([
@@ -24,22 +24,27 @@ const Accounts = () => {
         { id: 3, label: 'food', icon: food }
     ])
 
+    const [modal, setModal] = useState(false);
+    const [visible, setVisible] = useState('');
+
+    function toggle(modal, visible) {
+        setModal(modal);
+        setVisible(visible);
+    }
+
     const title = 'Accounts';
     return (
         <div className="accounts">
-            <div className='main' /*style={{ display: visible }}*/>
+            {modal && <Modal title={title} toggle={toggle}/>}
+            <div className='main' style={{ display: visible }}>
                 <div className='title'>
                     <h1>{title}</h1>
                     <div className='buttons'>
                         {/* text here goes in two rows */}
-                        <button className='button-icon' /*onClick={toggle}*/>
+                        <button className='button-icon' onClick={()=>{toggle(true, 'none')}}>
                             <Icon icon="pixelarticons:plus" />
                             Add {title.toLowerCase()}
                         </button>
-                        {/* <button className='button-icon' >
-                            <Icon icon="pixelarticons:edit-box" />
-                            Edit {title.toLowerCase()}
-                        </button> */}
                     </div>
                 </div>
                 <div className='main-items'>
@@ -53,7 +58,7 @@ const Accounts = () => {
                     </div>
                 </div>
             </div>
-            <div className='secondary'>
+            <div className='secondary' style={{display:visible}}>
                 <h1>Cash</h1>
                 <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "90%", alignItems: "center", marginLeft:"auto", marginRight:"auto"  }}>
                     <div className='half'>
