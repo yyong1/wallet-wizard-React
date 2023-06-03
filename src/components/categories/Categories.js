@@ -6,6 +6,8 @@ import water from '../../assets/icons-color/Water.png';
 import internet from '../../assets/icons-color/Internet.png';
 import phone from '../../assets/icons-color/iPhone SE.png';
 import netflix from '../../assets/icons-color/Netflix.png';
+import gas from '../../assets/icons-color/Gas Station.png';
+import groceries from '../../assets/icons-color/Grocery Bag.png';
 import { useState } from "react";
 import Modal from "../modals/modal/Modal";
 import { Icon } from "@iconify/react";
@@ -18,22 +20,23 @@ const Categories = () => {
     const single = 'category';
 
     const [main, setMain] = useState([
-        { id: 0, label: 'transport', icon: bus },
-        { id: 1, label: 'utilities', icon: electricity },
-        { id: 2, label: 'rent', icon: rent },
-        { id: 3, label: 'food', icon: food }
+        { id: 0, label: 'Transport', icon: bus },
+        { id: 1, label: 'Utilities', icon: electricity },
+        { id: 2, label: 'Rent', icon: rent },
+        { id: 3, label: 'Food', icon: food }
 
     ])
 
     const [secondary, setSecondary] = useState([
-        { id: 0, label: 'power', icon: electricity },
-        { id: 1, label: 'water', icon: water },
-        { id: 2, label: 'internet', icon: internet },
-        { id: 3, label: 'phone', icon: phone },
-        { id: 4, label: 'netflix', icon: netflix },
-        { id: 5, label: 'power', icon: electricity },
-        { id: 6, label: 'water', icon: water },
-        { id: 7, label: 'internet', icon: internet },
+        { id: 0, label: 'Power', icon: electricity, parent: main[1].label },
+        { id: 1, label: 'Water', icon: water, parent: main[1].label },
+        { id: 2, label: 'Internet', icon: internet, parent: main[1].label },
+        { id: 3, label: 'Phone', icon: phone, parent: main[1].label },
+        { id: 4, label: 'Netflix', icon: netflix, parent: main[1].label },
+        { id: 5, label: 'Gas', icon: gas, parent: main[0].label },
+        // { id: 6, label: 'Parking', icon: parking, parent: main[0].label },
+        { id: 7, label: 'Groceries', icon: groceries, parent: main[3].label },
+        { id: 8, label: 'Takeout', icon: food, parent: main[3].label }
     ])
 
     const [modal, setModal] = useState(false);
@@ -44,11 +47,19 @@ const Categories = () => {
         setVisible(visible);
     }
 
+    const [secondaryTitle, setSecondaryTitle] = useState('Utilities');
+
+    function changeTitle(secondaryTitle) {
+        setSecondaryTitle(secondaryTitle);
+    }
+
     return (
+
         <div className="categories">
             {/* <MSLayout title="Categories" main={main} secondary={secondary}></MSLayout> */}
             {modal &&
                 <Modal title={title} toggle={toggle} single={single} placeholder='groceries' />}
+            {console.log(secondary)}
             <div className='main' style={{ display: visible }}>
                 <div className='title'>
                     <h1>{title}</h1>
@@ -67,24 +78,25 @@ const Categories = () => {
                 <div className='main-items'>
                     <div className='card-list'>
                         {main.map((i) => (
-                            <div key={i.id} className='card'>
+                            <button key={i.id} className='card' onClick={() => { changeTitle(i.label) }}>
                                 <img src={i.icon}></img>
                                 <p>{i.label}</p>
-                            </div>
+                            </button>
                         ))}
+
                     </div>
                 </div>
             </div>
             <div className="secondary" style={{ display: visible }}>
-                <h2>{ }</h2>
+                <h2>{secondaryTitle}</h2>
                 <div className='secondary-items'>
                     <div className='card-list'>
-                        {secondary.map((i) => (
-                            <div key={i.id} className='card'>
-                                <img src={i.icon}></img>
-                                <p>{i.label}</p>
-                            </div>
-                        ))}
+                        {secondary.filter(i => i.parent === secondaryTitle).map(j => (
+                            <div key={j.id} className='card'>
+                                <img src={j.icon}></img>
+                                <p>{j.label}</p>
+                            </div>))
+                        }
                     </div>
                 </div>
                 <div className='wizard'>
