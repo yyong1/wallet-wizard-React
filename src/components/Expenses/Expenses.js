@@ -66,69 +66,83 @@ function Expenses() {
   const [isExpenses, setExpenses] = useState(expensesArr);
   // eslint-disable-next-line no-unused-vars
   const [isChartData, setChartDataState] = useState(chartData);
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  function modalHandler() {
+    setModalOpen(!isModalOpen);
+  }
 
   return (
-    <>
-      {/* Font links */}
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-        data-tag="font"
-      />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&amp;display=swap"
-        data-tag="font"
-      />
-      <div className="expenses-container">
-        <div className="expenses-expenses">
-          <div className="expenses-listoverview">
-            {/* ADD EXPENSES BUTTON */}
-            <div className="expenses-headersandfooter">
-              <span className="expenses-text36 Heading1">
-                <span>Expenses</span>
-              </span>
-              <div className="expenses-secondarywithicon">
-                <div className="expenses-frame3926">
-                  <img
-                    alt="pixelarticonsaddboxI115"
-                    src={images('./pixelarticonsaddboxi115-apwk.svg')}
-                    className="expenses-pixelarticonsaddbox"
-                  />
-                  <span className="expenses-text38"><span>Add expense</span></span>
+    <div>
+      { isModalOpen ? (<div>gg</div>)
+        : (
+          <>
+            {/* Font links */}
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+              data-tag="font"
+            />
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&amp;display=swap"
+              data-tag="font"
+            />
+            <div className="expenses-container">
+              <div className="expenses-expenses">
+                <div className="expenses-listoverview">
+                  {/* ADD EXPENSES BUTTON */}
+                  <div className="expenses-headersandfooter">
+                    <span className="expenses-text36 Heading1">
+                      <span>Expenses</span>
+                    </span>
+                    <button
+                      type="button"
+                      className="expenses-secondarywithicon"
+                      onClick={modalHandler}
+                    >
+                      <div className="expenses-frame3926">
+                        <img
+                          alt="pixelarticonsaddboxI115"
+                          src={images('./pixelarticonsaddboxi115-apwk.svg')}
+                          className="expenses-pixelarticonsaddbox"
+                        />
+                        <span className="expenses-text38"><span>Add expense</span></span>
+                      </div>
+                    </button>
+                  </div>
+                  {/* <div className="expenses-headersandfooter1" /> */}
+                  {/* EXPENSES LIST */}
+                  <div className="expenses-frame67">
+                    {isExpenses?.map((listElement) => (
+                      <div className="expenses-listitem">
+                        <div className="expenses-frame91">
+                          <div className="expenses-food">
+                            <img
+                              alt={listElement.name}
+                              src={listElement.img}
+                              className="expenses-food1"
+                            />
+                          </div>
+                          <span className="expenses-text16 Basictext">
+                            <span>{listElement.name}</span>
+                          </span>
+                        </div>
+                        <span className="expenses-text18 Basictext"><span>{listElement.amount}</span></span>
+                      </div>
+                    ))}
+                  </div>
+
+                </div>
+                {/* CHART */}
+                <div className="expenses-frame92">
+                  <Chart dataExpense={isChartData} />
                 </div>
               </div>
             </div>
-            {/* <div className="expenses-headersandfooter1" /> */}
-            {/* EXPENSES LIST */}
-            <div className="expenses-frame67">
-              {isExpenses?.map((listElement) => (
-                <div className="expenses-listitem">
-                  <div className="expenses-frame91">
-                    <div className="expenses-food">
-                      <img
-                        alt={listElement.name}
-                        src={listElement.img}
-                        className="expenses-food1"
-                      />
-                    </div>
-                    <span className="expenses-text16 Basictext">
-                      <span>{listElement.name}</span>
-                    </span>
-                  </div>
-                  <span className="expenses-text18 Basictext"><span>{listElement.amount}</span></span>
-                </div>
-              ))}
-            </div>
-
-          </div>
-          {/* CHART */}
-          <div className="expenses-frame92">
-            <Chart dataExpense={isChartData} />
-          </div>
-        </div>
-      </div>
-    </>
+          </>
+        )}
+    </div>
   );
 }
 

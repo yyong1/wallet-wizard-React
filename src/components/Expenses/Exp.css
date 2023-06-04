@@ -26,6 +26,10 @@
   align-items: center;
 }
 
+.expenses-headersandfooter button{
+  margin: 0px;
+}
+
 /* used */
 /* .expenses-listoverview {
     top: 120px;

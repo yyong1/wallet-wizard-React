@@ -6,6 +6,7 @@ import Login from './components/login/Login';
 import Categories from './components/categories/Categories';
 import Accounts from './components/accounts/Accounts';
 import Expenses from './components/Expenses/Expenses';
+import Income from './components/income/Income';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/categories' element={<Categories />}/>
           <Route path='/accounts' element={<Accounts />}/>
           <Route path='/expenses' element={<Expenses />}/>
+          <Route path='/income' element={<Income />}/>
         </Routes>
       </div>
     </div>
