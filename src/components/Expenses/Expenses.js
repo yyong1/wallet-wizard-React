@@ -158,9 +158,7 @@ function Expenses() {
               <div className="expenses-listoverview">
                 {/* ADD EXPENSES BUTTON */}
                 <div className="expenses-headersandfooter">
-                  <span className="expenses-text36 Heading1">
-                    <span>Expenses</span>
-                  </span>
+                  <h1>Expenses</h1>
                   <button
                     type="button"
                     className="expenses-secondarywithicon"
