@@ -140,17 +140,6 @@ function Expenses() {
         </div>
       ) : (
         <>
-          {/* Font links */}
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-            data-tag="font"
-          />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&amp;display=swap"
-            data-tag="font"
-          />
           <div className="expenses-container">
             <div className="expenses-expenses">
               <div className="expenses-listoverview">
