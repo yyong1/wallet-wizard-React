@@ -59,19 +59,19 @@ const expensesArr = [
 ];
 const dropdownInfo = [
   {
-    name: 'Name one',
-    placeholderData: 'first',
-    options: ['first', 'second', 'third'],
+    name: 'Category *',
+    placeholderData: 'Work',
+    options: ['Work', 'Work1', 'Work11'],
   },
   {
-    name: 'Name one',
-    placeholderData: 'second',
-    options: ['first', 'second', 'third'],
+    name: 'Subcategory',
+    placeholderData: 'Paycheck',
+    options: ['Paycheck', 'Paycheck1', 'Paycheck11'],
   },
   {
-    name: 'Name one',
-    placeholderData: 'third',
-    options: ['first', 'second', 'third'],
+    name: 'Account *',
+    placeholderData: 'Cash',
+    options: ['Cash', 'Cash1', 'Cash11'],
   },
 ];
 // hard coded data for chart
@@ -88,17 +88,21 @@ function Expenses() {
   // eslint-disable-next-line no-unused-vars
   const [isChartData, setChartDataState] = useState(chartData);
   const [isModalOpen, setModalOpen] = useState(false);
-  const [open, setOpen] = useState(false);
   function modalHandler() {
     setModalOpen(!isModalOpen);
   }
-  function handleOpen() {
-    setOpen(!isModalOpen);
-  }
+
+  const [open, setOpen] = useState(Array(dropdownInfo?.length).fill(false));
+
+  const handleOpen = (index) => {
+    const updatedOpen = [...open];
+    updatedOpen[index] = !updatedOpen[index];
+    setOpen(updatedOpen);
+  };
 
   return (
     <div>
-      { isModalOpen ? (
+      {isModalOpen ? (
         <div className="modal" id="modal-expenses-income">
           <div className="modal-content">
             <div className="modal-header">
@@ -106,18 +110,27 @@ function Expenses() {
             </div>
             <div className="modal-body">
               <div className="modal-body-left">
-                {dropdownInfo?.map((item) => (
+                {dropdownInfo?.map((item, index) => (
                   <div className="modal-item">
                     <div>
                       <p>{item.name}</p>
-                      <button type="button" className="dropdown" onClick={handleOpen}>
+                      <button
+                        type="button"
+                        className="dropdown"
+                        onClick={() => handleOpen(index)}
+                      >
                         {item.placeholderData}
-                        <ButtonIcon icon="pixelarticons:arrow-down-box" style={{ color: 'var(--ww-black)' }} />
+                        <ButtonIcon
+                          icon="pixelarticons:arrow-down-box"
+                          style={{ color: 'var(--ww-black)' }}
+                        />
                       </button>
-                      {open ? (
+                      {open[index] ? (
                         <div className="dropdown-list">
                           {item.options.map((option) => (
-                            <button type="button" className="dropdown-item">{option}</button>
+                            <button type="button" className="dropdown-item">
+                              {option}
+                            </button>
                           ))}
                         </div>
                       ) : null}
@@ -127,7 +140,7 @@ function Expenses() {
               </div>
               <div className="modal-body-right">
                 <div className="modal-item">
-                  <p className="modal-text">Name</p>
+                  <p className="modal-text">Amount *</p>
                   <input type="text" className="modal-input" />
                 </div>
               </div>
