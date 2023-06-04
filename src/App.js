@@ -1,6 +1,6 @@
+import { Route, Routes } from 'react-router-dom';
 import Homepage from './components/homepage/Homepage';
 import Navbar from './components/navbar/Navbar';
-import { Route, Routes } from 'react-router-dom';
 import Registration from './components/registration/Registration';
 import Login from './components/login/Login';
 import Categories from './components/categories/Categories';
@@ -14,13 +14,13 @@ function App() {
       <Navbar />
       <div>
         <Routes>
-          <Route path='/' element={<Homepage />} />
-          <Route path='/register' element={<Registration />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/categories' element={<Categories />}/>
-          <Route path='/accounts' element={<Accounts />}/>
-          <Route path='/expenses' element={<Expenses />}/>
-          <Route path='/income' element={<Income />}/>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/register" element={<Registration />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/accounts" element={<Accounts />} />
+          <Route path="/expenses" element={<Expenses />} />
+          <Route path="/income" element={<Income />} />
         </Routes>
       </div>
     </div>

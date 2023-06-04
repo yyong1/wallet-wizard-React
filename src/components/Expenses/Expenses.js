@@ -98,7 +98,7 @@ function Expenses() {
 
   return (
     <div>
-      { !isModalOpen ? (
+      { isModalOpen ? (
         <div className="modal" id="modal-expenses-income">
           <div className="modal-content">
             <div className="modal-header">
