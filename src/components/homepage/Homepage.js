@@ -16,7 +16,7 @@ const Homepage = () => {
     return (
         <div className="homepage">
             {/* <div style={{ height: "20px" }}></div> */}
-            <h2 style={{ marginLeft: "18vmax" }}>{par2}</h2>
+            <h2>{par2}</h2>
             <div>
                 <button className='bubble' onClick={nav}>
                     <h2>
@@ -25,9 +25,11 @@ const Homepage = () => {
                 </button>
                 <div className='bubble'></div>
                 <div className='bubble' style={{ padding: "1%", marginRight: "33%", marginTop: "1.5%" }}></div>
-                <div style={{ display: "flex", justifyContent: "flex-start" }}>
-                    <h2 style={{ marginTop: "8%", marginLeft: "4%" }}>{par}</h2>
-                    <img src={logo}></img>
+                <div className='wizard-text'>
+                    <h2>{par}</h2>
+                    <img src={logo}
+                        style={{}}
+                    ></img>
                 </div>
             </div>
         </div>

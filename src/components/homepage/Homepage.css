@@ -7,7 +7,6 @@
 }
 
 .homepage button.bubble {
-  
   width: min-content;
   height: min-content;
   border-radius: 100%;
@@ -15,6 +14,13 @@
   margin-top: 2%;
   margin-left: 45%;
   padding: 5%;
+  display: flex;
+}
+
+.homepage button.bubble h2 {
+  align-self: center;
+  padding: 1%;
+  margin:0;
 }
 
 .homepage .bubble {
@@ -27,3 +33,57 @@
   padding: 3%;
 }
 
+.homepage h2 {
+  margin-left: 18vmax;
+}
+
+.homepage .wizard-text{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.homepage .wizard-text h2{
+  margin-top: 8%;
+  margin-left: 4%;
+}
+
+@media (max-width: 640px) {
+  .homepage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .homepage h2 {
+    font-size: small;
+    margin-left: auto;
+    padding: 20% 10% 10% 10%;
+    padding-top: 100px;
+  }
+
+  .homepage button.bubble {
+    /* margin-left: 37%; */
+    margin:auto;
+    padding: 0;
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
+
+  .homepage button.bubble h2 {
+    align-self: center;
+    padding: 1%;
+    font-size: 30px;
+  }
+
+  .homepage .wizard-text {
+  }
+
+  .homepage .wizard-text img{
+    width: 30%;
+    height: 30%;
+  }
+
+  .homepage .wizard-text h2{
+    padding: 0;
+  }
+}
