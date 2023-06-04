@@ -50,12 +50,24 @@
   .navbar {
     flex-direction: column;
     height: fit-content;
+    width:412px;
+    position: fixed;
   }
-  .not-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .navbar h2{
+    font-size:x-large;
+  }
+
+  .navbar a{
+    font-size: small;
+  }
+
+  .navbar .buttons{
+    display: none;
+  }
+
+  .navbar .items{
+    display: inline;
     width: 100%;
-    margin: 1% 0 1% 0;
   }
 }

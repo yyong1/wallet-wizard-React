@@ -38,7 +38,7 @@ const Navbar = () => {
             <h2 onClick={homepage}>
                 WalletWizard
             </h2>
-            <div className='not-title'>
+            {/* <div className='not-title'> */}
                 <div className='items'>
                     <a onClick={expenses}>Expenses</a>
                     <a onClick={income}>Income</a>
@@ -54,7 +54,7 @@ const Navbar = () => {
                         Profile
                     </button>
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     );
 }
