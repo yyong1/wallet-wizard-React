@@ -29,6 +29,10 @@
 .expenses-headersandfooter button{
   margin: 0px;
 }
+.expenses-headersandfooter button:hover{
+  background-color: var(--accent-primary-hover);
+  cursor: pointer;
+}
 
 /* used */
 /* .expenses-listoverview {
