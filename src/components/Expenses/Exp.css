@@ -130,25 +130,6 @@
 }
 
 /* used */
-.expenses-food {
-  /* width: 45px;
-    height: 45px;
-    display: flex;
-    position: relative;
-    align-items: flex-start;
-    flex-shrink: 0; */
-}
-
-/* used */
-.expenses-food1 {
-  /* top: 0px; */
-  /* left: 0px; */
-  /* width: 45px; */
-  /* height: 45px; */
-  /* position: absolute; */
-}
-
-/* used */
 .expenses-text16 {
   margin-left: 4%;
   color: rgba(80, 81, 79, 1);
@@ -204,12 +185,6 @@
   overflow: hidden;
   align-items: center;
   justify-content: center;
-}
-
-/* used */
-.expenses-pixelarticonsaddbox {
-  /* width: 30px;
-    height: 30px; */
 }
 
 /* used */
