@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './Exp.css';
-import './ModalExp.css';
+import './Income.css';
+// import './ModalExp.css';
 import '../modals/modal/Modal.css';
 import Chart from '../Chart/Chart';
 // for the text style
@@ -17,44 +17,23 @@ const expensesArr = [
   {
     id: 1,
     img: images('./food.png'),
-    name: 'Expfdgdgdgd1',
-    amount: 100,
-    color: 'red',
+    name: 'Work',
+    amount: 140,
+    color: 'yellow',
   },
   {
     id: 2,
     img: images('./food.png'),
-    name: 'Exp2',
-    amount: 200,
-    color: 'green',
-  },
-  {
-    id: 3,
-    img: images('./food.png'),
-    name: 'Exp3',
-    amount: 300,
-    color: 'yellow',
-  },
-  {
-    id: 4,
-    img: images('./food.png'),
-    name: 'Exp4',
-    amount: 230,
-    color: 'blue',
-  },
-  {
-    id: 5,
-    img: images('./food.png'),
-    name: 'Exp5',
-    amount: 220,
+    name: 'Mom',
+    amount: 600,
     color: 'purple',
   },
   {
-    id: 6,
-    img: images('./food.png'),
-    name: 'Exp6',
-    amount: 120,
-    color: 'carrot',
+    id: 3,
+    img: images('./netflix.png'),
+    name: 'Furniture',
+    amount: 3000,
+    color: 'green',
   },
 ];
 const dropdownInfo = [
@@ -81,7 +60,7 @@ const chartData = {
   expensesChartColors: expensesArr.map((item) => item.color),
 };
 
-function Expenses() {
+function Income() {
   // state for expenses and chart
   // eslint-disable-next-line no-unused-vars
   const [isExpenses, setExpenses] = useState(expensesArr);
@@ -102,7 +81,7 @@ function Expenses() {
         <div className="modal" id="modal-expenses-income">
           <div className="modal-content">
             <div className="modal-header">
-              <h1>Add Expense</h1>
+              <h1>Add Income</h1>
             </div>
             <div className="modal-body">
               <div className="modal-body-left">
@@ -154,10 +133,10 @@ function Expenses() {
           <div className="expenses-container">
             <div className="expenses-expenses">
               <div className="expenses-listoverview">
-                {/* ADD EXPENSES BUTTON */}
+                {/* ADD inc BUTTON */}
                 <div className="expenses-headersandfooter">
                   <span className="expenses-text36 Heading1">
-                    <span>Expenses</span>
+                    <span>Income</span>
                   </span>
                   <button
                     type="button"
@@ -170,12 +149,12 @@ function Expenses() {
                         src={images('./pixelarticonsaddboxi115-apwk.svg')}
                         className="expenses-pixelarticonsaddbox"
                       />
-                      <span className="expenses-text38"><span>Add expense</span></span>
+                      <span className="expenses-text38"><span>Add income</span></span>
                     </div>
                   </button>
                 </div>
                 {/* <div className="expenses-headersandfooter1" /> */}
-                {/* EXPENSES LIST */}
+                {/* inc LIST */}
                 <div className="expenses-frame67">
                   {isExpenses?.map((listElement) => (
                     <div className="expenses-listitem">
@@ -209,4 +188,4 @@ function Expenses() {
   );
 }
 
-export default Expenses;
+export default Income;
