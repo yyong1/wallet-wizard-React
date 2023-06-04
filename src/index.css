@@ -200,3 +200,14 @@ button.icon-color-dropdown{
   border-color: var(--ww-white);
   border-radius: 10px;
 }
+
+@media (max-width:600px){
+  button{
+    width: 40%;
+    height: auto;
+  }
+
+  h1{
+    font-size: 20px
+  }
+}
