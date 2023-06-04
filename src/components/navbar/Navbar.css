@@ -1,47 +1,61 @@
-.navbar{
-    padding: 1%;
+.navbar {
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3%;
+  margin: 0 auto;
+  background-color: var(--primary);
+  position: fixed;
+  top: 0;
+}
+
+.navbar a {
+  padding: 1%;
+  font-family: "Inconsolata", monospace;
+  color: var(--ww-white);
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.navbar h2 {
+  font-size: 36px;
+  font-family: "Inconsolata", monospace;
+  color: var(--ww-white);
+  padding-left: 2%;
+  padding-right: 2%;
+  text-decoration: none;
+}
+
+.navbar h2 a:hover {
+  text-decoration: none;
+}
+
+.navbar .buttons {
+  margin-left: auto;
+  float: right;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar .buttons button {
+  padding: 1%;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .not-title{
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 3%;
-    margin: 0 auto;
-    background-color: var(--primary);
-    position:fixed;
-    top:0;
-}
-
-.navbar a{
-    padding: 1%;
-    font-family: 'Inconsolata', monospace;
-    color: var(--ww-white);
-}
-
-.navbar a:hover{
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.navbar h2{
-    font-size: 36px;
-    font-family: 'Inconsolata', monospace;
-    color: var(--ww-white);
-    padding-left: 2%;
-    padding-right: 2%;
-    text-decoration: none;
-}
-
-.navbar h2 a:hover{
-    text-decoration: none;
-}
-
-.navbar .buttons{
-    margin-left: auto;
-    float: right;
-    width: 40%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navbar .buttons button{
-    padding:1%;
+    margin: 1% 0 1% 0;
+  }
 }

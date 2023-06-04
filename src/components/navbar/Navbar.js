@@ -38,18 +38,22 @@ const Navbar = () => {
             <h2 onClick={homepage}>
                 WalletWizard
             </h2>
-            <a onClick={expenses}>Expenses</a>
-            <a onClick={income}>Income</a>
-            <a onClick={categories}>Categories</a>
-            <a onClick={accounts}>Accounts</a>
-            <a onClick={achievements}>Achievements</a>
-            <div className='buttons'>
-                <button onClick={homepage} className='primary' style={{marginRight:"0"}}>
-                    Log out
-                </button>
-                <button className='primary-outlined'>
-                    Profile
-                </button>
+            <div className='not-title'>
+                <div className='items'>
+                    <a onClick={expenses}>Expenses</a>
+                    <a onClick={income}>Income</a>
+                    <a onClick={categories}>Categories</a>
+                    <a onClick={accounts}>Accounts</a>
+                    <a onClick={achievements}>Achievements</a>
+                </div>
+                <div className='buttons'>
+                    <button onClick={homepage} className='primary' style={{ marginRight: "0" }}>
+                        Log out
+                    </button>
+                    <button className='primary-outlined'>
+                        Profile
+                    </button>
+                </div>
             </div>
         </div>
     );
